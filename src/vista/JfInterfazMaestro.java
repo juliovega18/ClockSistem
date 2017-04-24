@@ -332,7 +332,6 @@ public class JfInterfazMaestro extends javax.swing.JInternalFrame {
 
         btnRegistrar.setBackground(new java.awt.Color(102, 102, 102));
         btnRegistrar.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        btnRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/aceptar-o-no-la-correcta-seleccione-aceptar-verde-si-icono-9162-32.png"))); // NOI18N
         btnRegistrar.setText("Registrar");
         btnRegistrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnRegistrar.setIconTextGap(5);
@@ -354,7 +353,6 @@ public class JfInterfazMaestro extends javax.swing.JInternalFrame {
 
         btnSalir.setBackground(new java.awt.Color(102, 102, 102));
         btnSalir.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
-        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir-de-mi-perfil-icono-3964-32.png"))); // NOI18N
         btnSalir.setText("Salir");
         btnSalir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnSalir.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -367,7 +365,6 @@ public class JfInterfazMaestro extends javax.swing.JInternalFrame {
 
         btnModificar.setBackground(new java.awt.Color(102, 102, 102));
         btnModificar.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
-        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/signatura-icono-8756-32.png"))); // NOI18N
         btnModificar.setText("Modificar");
         btnModificar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnModificar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -385,7 +382,6 @@ public class JfInterfazMaestro extends javax.swing.JInternalFrame {
 
         btnEliminar.setBackground(new java.awt.Color(102, 102, 102));
         btnEliminar.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
-        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cuadrados-eliminar-icono-7310-32.png"))); // NOI18N
         btnEliminar.setText("Eliminar");
         btnEliminar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnEliminar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -397,7 +393,6 @@ public class JfInterfazMaestro extends javax.swing.JInternalFrame {
 
         btnLimpiar.setBackground(new java.awt.Color(102, 102, 102));
         btnLimpiar.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
-        btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/eliminar-cancelar-icono-4935-32.png"))); // NOI18N
         btnLimpiar.setText("Cancelar");
         btnLimpiar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnLimpiar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -486,7 +481,6 @@ public class JfInterfazMaestro extends javax.swing.JInternalFrame {
 
         btnBuscar.setBackground(new java.awt.Color(102, 102, 102));
         btnBuscar.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa-icono-3813-32.png"))); // NOI18N
         btnBuscar.setText("Buscar");
         btnBuscar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
