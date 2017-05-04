@@ -24,7 +24,7 @@ public class ControlAsignarMateria {
     private Connection cn=mysql.conectar();
     private String sSQL="";
     
-    public boolean registrarGrupo(EntidadAsignarMateria dts){
+    public boolean registrarAsignarMateria(EntidadAsignarMateria dts){
         sSQL="insert into maestro_has_materia (Maestro_NumeroEmpleado,Materia_ClaveMateria)"+"values (?,?)";
         
         try{
@@ -34,7 +34,7 @@ public class ControlAsignarMateria {
 
             
             int n=pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Los datos del grupo han sido actualizados");
+            JOptionPane.showMessageDialog(null, "La asignacion de la Materia han sido actualizados");
             
             if(n!=0){
                 return true;
@@ -44,7 +44,7 @@ public class ControlAsignarMateria {
             }
             
         }catch(Exception e){
-            JOptionPane.showMessageDialog(null, "Ya existe el grupo");
+            JOptionPane.showMessageDialog(null, "Ya existe la asignacion");
             
             return false;
         }
@@ -159,8 +159,5 @@ public class ControlAsignarMateria {
             JOptionPane.showConfirmDialog(null, e);
             return null;
         }
-        
-//        return cadena;
     }
-    
 }
