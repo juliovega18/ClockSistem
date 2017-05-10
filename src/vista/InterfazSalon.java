@@ -304,7 +304,7 @@ public class InterfazSalon extends javax.swing.JInternalFrame {
 
         btnSalir.setBackground(new java.awt.Color(102, 102, 102));
         btnSalir.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
-        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir-de-mi-perfil-icono-3964-32.png"))); // NOI18N
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Salir.png"))); // NOI18N
         btnSalir.setText("Salir");
         btnSalir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnSalir.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -399,6 +399,24 @@ public class InterfazSalon extends javax.swing.JInternalFrame {
                 JOptionPane.showMessageDialog(null, "Campo Vacío Ingreso número  o nombre de salon.", "Inane warning", JOptionPane.WARNING_MESSAGE);
 
             } else {
+                
+                String salonEncontrado = "";
+//                System.out.println("salonEncontrado " + salonEncontrado);
+                try {
+
+////          //   PBI1:HU02:01: MÉTODO QUE  VALIDA SI EL  SALON TIENE  UN HORARIO ASIGNADO PARA NO MODIFICARLO
+                    salonEncontrado = controlSalon.consultarSalonEspecifico(salonModificar );
+//                     System.out.println("salonEncontrado " + salonEncontrado);
+                } catch (SQLException ex) {
+                    Logger.getLogger(InterfazSalon.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+                if (salonEncontrado.equalsIgnoreCase(salonModificar)) {
+                    System.out.println("salon" + salonEncontrado);
+                    JOptionPane.showMessageDialog(rootPane, "EL Salon  " + salonModificar + " ya  existe", "ERROR", JOptionPane.ERROR_MESSAGE);
+                    txtNumeroSalon.setText("");
+                    inhabilitar();
+                } else {
                 //AGREGA A MODELO LOS   DATOS
                 modelSalon.setNumeroSalon(salonModificar);
                 System.out.println("salon" + salonModificar);
@@ -410,15 +428,15 @@ public class InterfazSalon extends javax.swing.JInternalFrame {
 //                HABILITA BOTONES
                 inhabilitar();
 
-            }
+            } } 
 
         }
 
         if (boton.equalsIgnoreCase("Guardar cambios")) {
             int fila = tbSalon.getSelectedRow();
             String idSalon = tbSalon.getValueAt(fila, 0).toString();
-            String salonExiste=tbSalon.getValueAt(fila, 1).toString();
- //   PBI1:HU02:03: MÉTODO QUE REGISTRA UN SALON VALIDA CAMPO VACÍO
+            String salonExiste = tbSalon.getValueAt(fila, 1).toString();
+            //   PBI1:HU02:03: MÉTODO QUE REGISTRA UN SALON VALIDA CAMPO VACÍO
             if (txtNumeroSalon.getText().equals("")) {
 
                 JOptionPane.showMessageDialog(null, "Campo Vacío Ingreso numero de grupo.", "Inane warning", JOptionPane.WARNING_MESSAGE);
@@ -439,6 +457,7 @@ public class InterfazSalon extends javax.swing.JInternalFrame {
 //                    System.out.println("salon" + salonEncontrado);
                     JOptionPane.showMessageDialog(rootPane, "EL Salon " + salonExiste + " NO SE PUEDE MODIFICAR, TIENE UN HORARIO ASIGNADO", "ERROR", JOptionPane.ERROR_MESSAGE);
                     txtNumeroSalon.setText("");
+                    inhabilitar();
                 } else {
 //          ASIGNA LOS  DATOS AL MODELO
                     modelSalon.setNumeroSalon(salonModificar);
@@ -448,7 +467,7 @@ public class InterfazSalon extends javax.swing.JInternalFrame {
                     try {
                         //           MÉTODO QUE MODIFICA EL  GRUPO
                         controlSalon.modificarSalon(idSalon, txtNumeroSalon.getText());
-                        
+                        inhabilitar();
                     } catch (SQLException ex) {
                         Logger.getLogger(InterfazSalon.class.getName()).log(Level.SEVERE, null, ex);
                     } catch (ClassNotFoundException ex) {
@@ -458,8 +477,7 @@ public class InterfazSalon extends javax.swing.JInternalFrame {
 //                    MUESTRA  LOS DATOS  EN LA TABLA
                     mostrar();
 //                    HABILITA LOS BOTONES
-                    inhabilitar();
-                     
+
                 }
             }
         }
@@ -498,17 +516,19 @@ public class InterfazSalon extends javax.swing.JInternalFrame {
 // PBI1:HU01: MÉTODO  QUE CONSULTA   SI UN SALON TIENE UN HORARIO  ASIGNADO
             salonEncontrado = controlSalon.consultarSalonTieneHorario(salon);
             System.out.println("salonEncontrado" + salonEncontrado);
+
         } catch (SQLException ex) {
             Logger.getLogger(InterfazSalon.class
                     .getName()).log(Level.SEVERE, null, ex);
         }
 
         if (salonEncontrado.equalsIgnoreCase(idSalon)) {
-            JOptionPane.showMessageDialog(rootPane, "EL SALON "+numEliminar +"  NO SE PUEDE ELIMINAR, TIENE UN HORARIO ASIGNADO", "ERROR", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane, "EL SALON " + numEliminar + "  NO SE PUEDE ELIMINAR, TIENE UN HORARIO ASIGNADO", "ERROR", JOptionPane.ERROR_MESSAGE);
+            inhabilitar();
         } else {
 //       PBI1:HU01: MÉTODO  QUE ELIMINA  UN SALÓN
             controlSalon.eliminarSalon(modelSalon);
-            salon="";
+            salon = "";
             mostrar();
             inhabilitar();
 

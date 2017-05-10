@@ -339,7 +339,7 @@
                   <Font name="Bodoni MT" size="14" style="1"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/salir-de-mi-perfil-icono-3964-32.png"/>
+                  <Image iconType="3" name="/Imagenes/Salir.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Salir"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>

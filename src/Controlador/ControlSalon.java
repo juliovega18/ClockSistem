@@ -26,6 +26,7 @@ public class ControlSalon {
     private Connection cn = mysql.conectar();
     private String sSQL = "";
 //  PBI1:HU01:01: MÉTODO QUE REGISTRA UN SALON
+
     public boolean RegistrarSalon(EntidadSalon dts) {
         sSQL = "insert into salon (NumSalon)" + "values (?)";
 
@@ -80,6 +81,7 @@ public class ControlSalon {
 
     }
 //              PBI1:HU03:01 MÉTODO  QUE ELIMINA  UN SALÓN
+
     public boolean eliminarSalon(EntidadSalon dts) {
         sSQL = "delete from salon where NumSalon=?";
         try {
@@ -132,6 +134,7 @@ public class ControlSalon {
         System.out.println("sSQL" + sSQL);
         PreparedStatement pst = cn.prepareStatement(sSQL);
         pst.executeUpdate();
+        JOptionPane.showMessageDialog(null, "los datos han sido modificados satisfactoriamente");
 
     }
 
@@ -161,6 +164,7 @@ public class ControlSalon {
     }
 // PBI1:HU02:02 MÉTODO  QUE CONSULTA   SI UN SALON TIENE UN HORARIO  ASIGNADO PARA NO ELIMINAR
 // PBI1:HU03:02  MÉTODO  QUE CONSULTA   SI UN SALON TIENE UN HORARIO  ASIGNADO PARA NO MODIFICAR
+
     public String consultarSalonTieneHorario(String salon) throws SQLException {
         String cadena = "";
 
