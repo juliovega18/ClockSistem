@@ -111,5 +111,26 @@ public class ControlDisponibilidad {
         }
         
     }
+    public int consultarHorasAsignadas(int numeroEmpleado){
+        int contador=0;
+        sSQL="select count(*) from horario_disponible where Maestro_NumeroEmpleado = "+numeroEmpleado+" ";
+        try{
+            Statement st=cn.createStatement();
+            ResultSet rs=st.executeQuery(sSQL);
+            
+            while(rs.next()){
+                contador++;
+                
+            }
+            
+//                return cadena;
+            
+        }catch(Exception e){
+            
+        }
+        return contador;
+        
+    }
+    
     
 }

@@ -27,6 +27,7 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
     String recibe[]=null;
     String disponi[]=null;
     private String sSQL="";
+    int horasRestante=0;
 
     /**
      * Creates new form InterfazAsignarDisponibilidad
@@ -37,8 +38,8 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
     ControlDisponibilidad controlDisponibilidad=new ControlDisponibilidad();
     EntidadDisponibilidad modeloDisponibilidad=new EntidadDisponibilidad();
     
-    ControlHorasAsignacion controlhoras=new ControlHorasAsignacion();
-    EntidadHorasAsignacion entidadHoras=new EntidadHorasAsignacion();
+//    ControlHorasAsignacion controlhoras=new ControlHorasAsignacion();
+//    EntidadHorasAsignacion entidadHoras=new EntidadHorasAsignacion();
     
     
     public InterfazAsignarDisponibilidad() {
@@ -148,221 +149,431 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                     if(Dia.equals("Lunes")){
                         if(Hora.equalsIgnoreCase("7")){
                             CL1.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("8")){
                             CL2.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("9")){
                             CL3.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("10")){
                             CL4.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("11")){
                             CL5.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("12")){
                             CL6.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("13")){
                             CL7.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("14")){
                             CL8.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("15")){
                             CL9.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("16")){
                             CL10.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("17")){
                             CL11.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("18")){
                             CL12.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("19")){
                             CL13.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("20")){
                             CL14.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                     }
                     if(Dia.equals("Martes")){
                         if(Hora.equalsIgnoreCase("7")){
                             CMA1.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("8")){
                             CMA2.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("9")){
                             CMA3.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("10")){
                             CMA4.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("11")){
                             CMA5.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("12")){
                             CMA6.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("13")){
                             CMA7.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("14")){
                             CMA8.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("15")){
                             CMA9.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("16")){
                             CMA10.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("17")){
                             CMA11.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("18")){
                             CMA12.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("19")){
                             CMA13.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("20")){
                             CMA14.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                     }
                     if(Dia.equals("Miercoles")){
                         if(Hora.equalsIgnoreCase("7")){
                             CM1.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("8")){
                             CM2.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("9")){
                             CM3.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("10")){
                             CM4.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("11")){
                             CM5.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("12")){
                             CM6.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("13")){
                             CM7.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("14")){
                             CM8.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("15")){
                             CM9.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("16")){
                             CM10.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("17")){
                             CM11.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("18")){
                             CM12.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("19")){
                             CM13.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("20")){
                             CM14.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                     }
                     if(Dia.equals("Jueves")){
                         if(Hora.equalsIgnoreCase("7")){
                             CJ1.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("8")){
                             CJ2.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("9")){
                             CJ3.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("10")){
                             CJ4.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("11")){
                             CJ5.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("12")){
                             CJ6.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("13")){
                             CJ7.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("14")){
                             CJ8.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("15")){
                             CJ9.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("16")){
                             CJ10.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("17")){
                             CJ11.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("18")){
                             CJ12.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("19")){
                             CJ13.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("20")){
                             CJ14.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                     }
                     if(Dia.equals("Viernes")){
                         if(Hora.equalsIgnoreCase("7")){
                             CV1.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("8")){
                             CV2.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("9")){
                             CV3.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("10")){
                             CV4.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("11")){
                             CV5.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("12")){
                             CV6.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("13")){
                             CV7.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("14")){
                             CV8.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("15")){
                             CV9.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("16")){
                             CV10.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("17")){
                             CV11.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("18")){
                             CV12.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("19")){
                             CV13.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                         if(Hora.equalsIgnoreCase("20")){
                             CV14.setSelected(true);
+                            horasRestante--;
+                            String hor=Integer.toString(horasRestante);
+                            txtRestantes.setText(hor);
                         }
                     }                   
                 }               
@@ -393,9 +604,8 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
         ET2.setText(nombreCompleto);
         ET3.setText(horasAsignadas);
         txtRestantes.setText(horasAsignadas);
-        int noEmpleado=Integer.parseInt(numEmpleado);
-//        int horas=controlhoras.consultarHorasAsignadas(noEmpleado);
-//        JOptionPane.showMessageDialog(null, "Horas: "+horas);
+        horasRestante=Integer.parseInt(horasAsignadas);
+
         consultarGeneral(numEmpleado);
     }
     public void HorasRestantes(){
@@ -431,15 +641,7 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
         modeloDisponibilidad.setHora(hora);
         controlDisponibilidad.eliminarDisponibilidad(modeloDisponibilidad);
     }
-    public int consultarHoras(int nume){
-        int hora=0;
-        try {
-            hora=controlhoras.consultarHorasAsignadas(nume);
-        } catch (SQLException ex) {
-            Logger.getLogger(InterfazAsignarDisponibilidad.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return hora;
-    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -742,44 +944,39 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
         jLabel32.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel32.setText("20:00-21:00");
 
-        CL1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CL1MouseClicked(evt);
-            }
-        });
         CL1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CL1ActionPerformed(evt);
             }
         });
 
-        CL2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CL2MouseClicked(evt);
+        CL2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CL2ActionPerformed(evt);
             }
         });
 
-        CL3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CL3MouseClicked(evt);
+        CL3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CL3ActionPerformed(evt);
             }
         });
 
-        CL4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CL4MouseClicked(evt);
+        CL4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CL4ActionPerformed(evt);
             }
         });
 
-        CL5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CL5MouseClicked(evt);
+        CL5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CL5ActionPerformed(evt);
             }
         });
 
-        CL6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CL6MouseClicked(evt);
+        CL6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CL6ActionPerformed(evt);
             }
         });
 
@@ -788,10 +985,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CMA1MouseClicked(evt);
             }
         });
+        CMA1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMA1ActionPerformed(evt);
+            }
+        });
 
         CMA2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CMA2MouseClicked(evt);
+            }
+        });
+        CMA2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMA2ActionPerformed(evt);
             }
         });
 
@@ -800,10 +1007,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CMA3MouseClicked(evt);
             }
         });
+        CMA3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMA3ActionPerformed(evt);
+            }
+        });
 
         CMA4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CMA4MouseClicked(evt);
+            }
+        });
+        CMA4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMA4ActionPerformed(evt);
             }
         });
 
@@ -812,10 +1029,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CMA5MouseClicked(evt);
             }
         });
+        CMA5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMA5ActionPerformed(evt);
+            }
+        });
 
         CM1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CM1MouseClicked(evt);
+            }
+        });
+        CM1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CM1ActionPerformed(evt);
             }
         });
 
@@ -824,10 +1051,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CJ1MouseClicked(evt);
             }
         });
+        CJ1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CJ1ActionPerformed(evt);
+            }
+        });
 
         CV1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CV1MouseClicked(evt);
+            }
+        });
+        CV1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CV1ActionPerformed(evt);
             }
         });
 
@@ -836,10 +1073,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CM2MouseClicked(evt);
             }
         });
+        CM2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CM2ActionPerformed(evt);
+            }
+        });
 
         CJ2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CJ2MouseClicked(evt);
+            }
+        });
+        CJ2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CJ2ActionPerformed(evt);
             }
         });
 
@@ -848,10 +1095,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CV2MouseClicked(evt);
             }
         });
+        CV2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CV2ActionPerformed(evt);
+            }
+        });
 
         CM3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CM3MouseClicked(evt);
+            }
+        });
+        CM3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CM3ActionPerformed(evt);
             }
         });
 
@@ -860,10 +1117,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CJ3MouseClicked(evt);
             }
         });
+        CJ3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CJ3ActionPerformed(evt);
+            }
+        });
 
         CV3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CV3MouseClicked(evt);
+            }
+        });
+        CV3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CV3ActionPerformed(evt);
             }
         });
 
@@ -872,10 +1139,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CM4MouseClicked(evt);
             }
         });
+        CM4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CM4ActionPerformed(evt);
+            }
+        });
 
         CJ4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CJ4MouseClicked(evt);
+            }
+        });
+        CJ4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CJ4ActionPerformed(evt);
             }
         });
 
@@ -884,10 +1161,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CV4MouseClicked(evt);
             }
         });
+        CV4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CV4ActionPerformed(evt);
+            }
+        });
 
         CM5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CM5MouseClicked(evt);
+            }
+        });
+        CM5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CM5ActionPerformed(evt);
             }
         });
 
@@ -896,10 +1183,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CJ5MouseClicked(evt);
             }
         });
+        CJ5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CJ5ActionPerformed(evt);
+            }
+        });
 
         CV5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CV5MouseClicked(evt);
+            }
+        });
+        CV5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CV5ActionPerformed(evt);
             }
         });
 
@@ -908,10 +1205,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CMA6MouseClicked(evt);
             }
         });
+        CMA6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMA6ActionPerformed(evt);
+            }
+        });
 
         CM6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CM6MouseClicked(evt);
+            }
+        });
+        CM6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CM6ActionPerformed(evt);
             }
         });
 
@@ -920,10 +1227,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CJ6MouseClicked(evt);
             }
         });
+        CJ6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CJ6ActionPerformed(evt);
+            }
+        });
 
         CV6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CV6MouseClicked(evt);
+            }
+        });
+        CV6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CV6ActionPerformed(evt);
             }
         });
 
@@ -932,10 +1249,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CL7MouseClicked(evt);
             }
         });
+        CL7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CL7ActionPerformed(evt);
+            }
+        });
 
         CMA7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CMA7MouseClicked(evt);
+            }
+        });
+        CMA7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMA7ActionPerformed(evt);
             }
         });
 
@@ -944,10 +1271,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CM7MouseClicked(evt);
             }
         });
+        CM7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CM7ActionPerformed(evt);
+            }
+        });
 
         CJ7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CJ7MouseClicked(evt);
+            }
+        });
+        CJ7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CJ7ActionPerformed(evt);
             }
         });
 
@@ -956,10 +1293,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CV7MouseClicked(evt);
             }
         });
+        CV7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CV7ActionPerformed(evt);
+            }
+        });
 
         CL8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CL8MouseClicked(evt);
+            }
+        });
+        CL8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CL8ActionPerformed(evt);
             }
         });
 
@@ -968,10 +1315,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CMA8MouseClicked(evt);
             }
         });
+        CMA8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMA8ActionPerformed(evt);
+            }
+        });
 
         CM8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CM8MouseClicked(evt);
+            }
+        });
+        CM8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CM8ActionPerformed(evt);
             }
         });
 
@@ -980,10 +1337,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CJ8MouseClicked(evt);
             }
         });
+        CJ8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CJ8ActionPerformed(evt);
+            }
+        });
 
         CV8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CV8MouseClicked(evt);
+            }
+        });
+        CV8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CV8ActionPerformed(evt);
             }
         });
 
@@ -992,10 +1359,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CL9MouseClicked(evt);
             }
         });
+        CL9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CL9ActionPerformed(evt);
+            }
+        });
 
         CMA9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CMA9MouseClicked(evt);
+            }
+        });
+        CMA9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMA9ActionPerformed(evt);
             }
         });
 
@@ -1004,10 +1381,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CM9MouseClicked(evt);
             }
         });
+        CM9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CM9ActionPerformed(evt);
+            }
+        });
 
         CJ9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CJ9MouseClicked(evt);
+            }
+        });
+        CJ9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CJ9ActionPerformed(evt);
             }
         });
 
@@ -1016,10 +1403,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CV9MouseClicked(evt);
             }
         });
+        CV9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CV9ActionPerformed(evt);
+            }
+        });
 
         CL10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CL10MouseClicked(evt);
+            }
+        });
+        CL10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CL10ActionPerformed(evt);
             }
         });
 
@@ -1028,10 +1425,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CMA10MouseClicked(evt);
             }
         });
+        CMA10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMA10ActionPerformed(evt);
+            }
+        });
 
         CM10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CM10MouseClicked(evt);
+            }
+        });
+        CM10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CM10ActionPerformed(evt);
             }
         });
 
@@ -1040,10 +1447,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CJ10MouseClicked(evt);
             }
         });
+        CJ10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CJ10ActionPerformed(evt);
+            }
+        });
 
         CV10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CV10MouseClicked(evt);
+            }
+        });
+        CV10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CV10ActionPerformed(evt);
             }
         });
 
@@ -1052,10 +1469,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CL11MouseClicked(evt);
             }
         });
+        CL11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CL11ActionPerformed(evt);
+            }
+        });
 
         CMA11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CMA11MouseClicked(evt);
+            }
+        });
+        CMA11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMA11ActionPerformed(evt);
             }
         });
 
@@ -1064,10 +1491,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CM11MouseClicked(evt);
             }
         });
+        CM11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CM11ActionPerformed(evt);
+            }
+        });
 
         CJ11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CJ11MouseClicked(evt);
+            }
+        });
+        CJ11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CJ11ActionPerformed(evt);
             }
         });
 
@@ -1076,10 +1513,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CV11MouseClicked(evt);
             }
         });
+        CV11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CV11ActionPerformed(evt);
+            }
+        });
 
         CL12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CL12MouseClicked(evt);
+            }
+        });
+        CL12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CL12ActionPerformed(evt);
             }
         });
 
@@ -1088,10 +1535,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CMA12MouseClicked(evt);
             }
         });
+        CMA12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMA12ActionPerformed(evt);
+            }
+        });
 
         CM12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CM12MouseClicked(evt);
+            }
+        });
+        CM12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CM12ActionPerformed(evt);
             }
         });
 
@@ -1100,10 +1557,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CJ12MouseClicked(evt);
             }
         });
+        CJ12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CJ12ActionPerformed(evt);
+            }
+        });
 
         CV12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CV12MouseClicked(evt);
+            }
+        });
+        CV12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CV12ActionPerformed(evt);
             }
         });
 
@@ -1112,10 +1579,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CL13MouseClicked(evt);
             }
         });
+        CL13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CL13ActionPerformed(evt);
+            }
+        });
 
         CMA13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CMA13MouseClicked(evt);
+            }
+        });
+        CMA13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMA13ActionPerformed(evt);
             }
         });
 
@@ -1124,10 +1601,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CM13MouseClicked(evt);
             }
         });
+        CM13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CM13ActionPerformed(evt);
+            }
+        });
 
         CJ13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CJ13MouseClicked(evt);
+            }
+        });
+        CJ13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CJ13ActionPerformed(evt);
             }
         });
 
@@ -1136,10 +1623,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CV13MouseClicked(evt);
             }
         });
+        CV13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CV13ActionPerformed(evt);
+            }
+        });
 
         CL14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CL14MouseClicked(evt);
+            }
+        });
+        CL14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CL14ActionPerformed(evt);
             }
         });
 
@@ -1148,10 +1645,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CMA14MouseClicked(evt);
             }
         });
+        CMA14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CMA14ActionPerformed(evt);
+            }
+        });
 
         CM14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CM14MouseClicked(evt);
+            }
+        });
+        CM14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CM14ActionPerformed(evt);
             }
         });
 
@@ -1160,10 +1667,20 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 CJ14MouseClicked(evt);
             }
         });
+        CJ14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CJ14ActionPerformed(evt);
+            }
+        });
 
         CV14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CV14MouseClicked(evt);
+            }
+        });
+        CV14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CV14ActionPerformed(evt);
             }
         });
 
@@ -1518,7 +2035,7 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
         jPanel6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnGuardar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnGuardar.setText("Agregar horario");
+        btnGuardar.setText("Terminar Disponibilidad");
         btnGuardar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnGuardarMouseClicked(evt);
@@ -1548,9 +2065,9 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1560,9 +2077,9 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -1576,8 +2093,8 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45)))
-                .addContainerGap(13, Short.MAX_VALUE))
+                        .addGap(77, 77, 77)))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();
@@ -1598,8 +2115,6 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
                 int numEmpleado=Integer.parseInt(clave);
                 
                 mostrarMaestroEspecifico(numEmpleado);
-                int hora=consultarHoras(numEmpleado);
-                txtRestantes.setText(Integer.toString(hora));
                 inhabilitarAceptar();
                 habilitar();
 
@@ -1608,2761 +2123,374 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
             }
         }
         
-//        JOptionPane.showMessageDialog(null, "seleccion: "+valorSeleccion);
     }//GEN-LAST:event_btnAceptarMouseClicked
-
-    private void CL1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CL1MouseClicked
-
-            // TODO add your handling code here:
-            String Dia="Lunes";
-            int Hora=7;
-            boolean valor=CL1.isSelected();
-            
-            
-            int horas=0;
-            int resul=0;
-            String numEm=ET1.getText();
-            int noEmpleado=Integer.parseInt(numEm);
-            horas=consultarHoras(noEmpleado);
-            
-            if(valor==true){
-                if(horas==0){
-                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                    CL1.setSelected(false);
-                }
-                else{
-                    HorasRestantes();
-                    ingresarDatos(Dia,Hora);
-                    resul=horas-1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }
-            }
-            else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
-    }//GEN-LAST:event_CL1MouseClicked
-
-    private void CL2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CL2MouseClicked
-
-            // TODO add your handling code here:
-            String Dia="Lunes";
-            int Hora=8;
-            boolean valor=CL2.isSelected();
-            
-            int horas=0;
-            int resul=0;
-            String numEm=ET1.getText();
-            int noEmpleado=Integer.parseInt(numEm);
-            horas=consultarHoras(noEmpleado);
-            
-            
-            if(valor==true){
-                if(horas==0){
-                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                    CL2.setSelected(false);
-                }
-                else{
-                    HorasRestantes();
-                    ingresarDatos(Dia,Hora);
-                    resul=horas-1;
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }
-            }
-            else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
-            
-    }//GEN-LAST:event_CL2MouseClicked
-
-    private void CL3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CL3MouseClicked
-
-            // TODO add your handling code here:
-            String Dia="Lunes";
-            int Hora=9;
-            boolean valor=CL3.isSelected();
-            
-            int horas=0;
-            int resul=0;
-            String numEm=ET1.getText();
-            int noEmpleado=Integer.parseInt(numEm);
-            horas=consultarHoras(noEmpleado);
-            
-            if(valor==true){
-                if(horas==0){
-                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                    CL3.setSelected(false);
-                }
-                else{
-                    HorasRestantes();
-                    ingresarDatos(Dia,Hora);
-                    resul=horas-1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }
-            }
-            else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
-    }//GEN-LAST:event_CL3MouseClicked
-
-    private void CL4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CL4MouseClicked
-
-            // TODO add your handling code here:
-            String Dia="Lunes";
-            int Hora=10;
-            boolean valor=CL4.isSelected();
-            
-            int horas=0;
-            int resul=0;
-            String numEm=ET1.getText();
-            int noEmpleado=Integer.parseInt(numEm);
-            horas=consultarHoras(noEmpleado);
-            
-            
-            if(valor==true){
-                if(horas==0){
-                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                    CL4.setSelected(false);
-                }
-                else{
-                    HorasRestantes();
-                    ingresarDatos(Dia,Hora);
-                    resul=horas-1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }
-            }
-            else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
-
-    }//GEN-LAST:event_CL4MouseClicked
-
-    private void CL5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CL5MouseClicked
-
-            // TODO add your handling code here:
-            String Dia="Lunes";
-            int Hora=11;
-            boolean valor=CL5.isSelected();
-            
-            int horas=0;
-            int resul=0;
-            String numEm=ET1.getText();
-            int noEmpleado=Integer.parseInt(numEm);
-            horas=consultarHoras(noEmpleado);
-            
-            if(valor==true){
-                if(horas==0){
-                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                    CL5.setSelected(false);
-                }
-                else{
-                    HorasRestantes();
-                    ingresarDatos(Dia,Hora);
-                    resul=horas-1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }
-            }
-            else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
-
-    }//GEN-LAST:event_CL5MouseClicked
-
-    private void CL6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CL6MouseClicked
-
-            // TODO add your handling code here:
-            String Dia="Lunes";
-            int Hora=12;
-            boolean valor=CL6.isSelected();
-            
-            int horas=0;
-            int resul=0;
-            String numEm=ET1.getText();
-            int noEmpleado=Integer.parseInt(numEm);
-            horas=consultarHoras(noEmpleado);
-            
-            if(valor==true){
-                if(horas==0){
-                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                    CL6.setSelected(false);
-                }
-                else{
-                    HorasRestantes();
-                    ingresarDatos(Dia,Hora);
-                    resul=horas-1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }
-            }
-            else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
-
-    }//GEN-LAST:event_CL6MouseClicked
 
     private void CL7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CL7MouseClicked
         // TODO add your handling code here:
-        String Dia="Lunes";
-        int Hora=13;
-        boolean valor=CL7.isSelected();
-        
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CL7.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CL7MouseClicked
 
     private void CL8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CL8MouseClicked
         // TODO add your handling code here:
-        String Dia="Lunes";
-        int Hora=14;
-        boolean valor=CL8.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CL8.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CL8MouseClicked
 
     private void CL9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CL9MouseClicked
         // TODO add your handling code here:
-        String Dia="Lunes";
-        int Hora=15;
-        boolean valor=CL9.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CL9.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
+
     }//GEN-LAST:event_CL9MouseClicked
 
     private void CL10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CL10MouseClicked
         // TODO add your handling code here:
-        String Dia="Lunes";
-        int Hora=16;
-        boolean valor=CL10.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CL10.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
+
     }//GEN-LAST:event_CL10MouseClicked
 
     private void CL11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CL11MouseClicked
         // TODO add your handling code here:
-        String Dia="Lunes";
-        int Hora=17;
-        boolean valor=CL11.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CL11.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
+
     }//GEN-LAST:event_CL11MouseClicked
 
     private void CL12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CL12MouseClicked
         // TODO add your handling code here:
-        String Dia="Lunes";
-        int Hora=18;
-        boolean valor=CL12.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CL12.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
+
     }//GEN-LAST:event_CL12MouseClicked
 
     private void CL13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CL13MouseClicked
         // TODO add your handling code here:
-        String Dia="Lunes";
-        int Hora=19;
-        boolean valor=CL13.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CL13.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CL13MouseClicked
 
     private void CL14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CL14MouseClicked
         // TODO add your handling code here:
-        String Dia="Lunes";
-        int Hora=20;
-        boolean valor=CL14.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CL14.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
+
     }//GEN-LAST:event_CL14MouseClicked
 
     private void CL1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CL1ActionPerformed
         // TODO add your handling code here:
+        String Dia="Lunes";
+            int Hora=7;
+            boolean valor=CL1.isSelected();
+            
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CL1.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
     }//GEN-LAST:event_CL1ActionPerformed
 
     private void CMA1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CMA1MouseClicked
         // TODO add your handling code here:
-        String Dia="Martes";
-        int Hora=7;
-        boolean valor=CMA1.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CMA1.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
+
     }//GEN-LAST:event_CMA1MouseClicked
 
     private void CMA2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CMA2MouseClicked
         // TODO add your handling code here:
-        String Dia="Martes";
-        int Hora=8;
-        boolean valor=CMA2.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CMA2.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
+
     }//GEN-LAST:event_CMA2MouseClicked
 
     private void CMA3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CMA3MouseClicked
         // TODO add your handling code here:
-        String Dia="Martes";
-        int Hora=9;
-        boolean valor=CMA3.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CMA3.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
     }//GEN-LAST:event_CMA3MouseClicked
 
     private void CMA4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CMA4MouseClicked
         // TODO add your handling code here:
-        String Dia="Martes";
-        int Hora=10;
-        boolean valor=CMA4.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CMA4.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
     }//GEN-LAST:event_CMA4MouseClicked
 
     private void CMA5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CMA5MouseClicked
         // TODO add your handling code here:
-        String Dia="Martes";
-        int Hora=11;
-        boolean valor=CMA5.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CMA5.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CMA5MouseClicked
 
     private void CMA6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CMA6MouseClicked
         // TODO add your handling code here:
-        String Dia="Martes";
-        int Hora=12;
-        boolean valor=CMA6.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CMA6.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CMA6MouseClicked
 
     private void CMA7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CMA7MouseClicked
         // TODO add your handling code here:
-        String Dia="Martes";
-        int Hora=13;
-        boolean valor=CMA7.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CMA7.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CMA7MouseClicked
 
     private void CMA8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CMA8MouseClicked
         // TODO add your handling code here:
-        String Dia="Martes";
-        int Hora=14;
-        boolean valor=CMA8.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CMA8.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
+
     }//GEN-LAST:event_CMA8MouseClicked
 
     private void CMA9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CMA9MouseClicked
         // TODO add your handling code here:
-        String Dia="Martes";
-        int Hora=15;
-        boolean valor=CMA9.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CMA9.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CMA9MouseClicked
 
     private void CMA10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CMA10MouseClicked
         // TODO add your handling code here:
-        String Dia="Martes";
-        int Hora=16;
-        boolean valor=CMA10.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CMA10.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CMA10MouseClicked
 
     private void CMA11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CMA11MouseClicked
         // TODO add your handling code here:
-        String Dia="Martes";
-        int Hora=17;
-        boolean valor=CMA11.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CMA11.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CMA11MouseClicked
 
     private void CMA12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CMA12MouseClicked
         // TODO add your handling code here:
-        String Dia="Martes";
-        int Hora=18;
-        boolean valor=CMA12.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CMA12.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
+
     }//GEN-LAST:event_CMA12MouseClicked
 
     private void CMA13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CMA13MouseClicked
         // TODO add your handling code here:
-        String Dia="Martes";
-        int Hora=19;
-        boolean valor=CMA13.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CMA13.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
+
     }//GEN-LAST:event_CMA13MouseClicked
 
     private void CMA14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CMA14MouseClicked
         // TODO add your handling code here:
-        String Dia="Martes";
-        int Hora=20;
-        boolean valor=CMA14.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CMA14.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CMA14MouseClicked
 
     private void CM1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CM1MouseClicked
         // TODO add your handling code here:
-        String Dia="Miercoles";
-        int Hora=7;
-        boolean valor=CM1.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CM1.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CM1MouseClicked
 
     private void CM2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CM2MouseClicked
         // TODO add your handling code here:
-        String Dia="Miercoles";
-        int Hora=8;
-        boolean valor=CM2.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CM2.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CM2MouseClicked
 
     private void CM3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CM3MouseClicked
         // TODO add your handling code here:
-        String Dia="Miercoles";
-        int Hora=9;
-        boolean valor=CM3.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CM3.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CM3MouseClicked
 
     private void CM4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CM4MouseClicked
         // TODO add your handling code here:
-        String Dia="Miercoles";
-        int Hora=10;
-        boolean valor=CM4.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CM4.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CM4MouseClicked
 
     private void CM5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CM5MouseClicked
         // TODO add your handling code here:
-        String Dia="Miercoles";
-        int Hora=11;
-        boolean valor=CM5.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CM5.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
+
     }//GEN-LAST:event_CM5MouseClicked
 
     private void CM6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CM6MouseClicked
         // TODO add your handling code here:
-        String Dia="Miercoles";
-        int Hora=12;
-        boolean valor=CM6.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CM6.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CM6MouseClicked
 
     private void CM7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CM7MouseClicked
         // TODO add your handling code here:
-        String Dia="Miercoles";
-        int Hora=13;
-        boolean valor=CM7.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CM7.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CM7MouseClicked
 
     private void CM8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CM8MouseClicked
         // TODO add your handling code here:
-        String Dia="Miercoles";
-        int Hora=14;
-        boolean valor=CM8.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CM8.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CM8MouseClicked
 
     private void CM9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CM9MouseClicked
         // TODO add your handling code here:
-        String Dia="Miercoles";
-        int Hora=15;
-        boolean valor=CM9.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CM9.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CM9MouseClicked
 
     private void CM10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CM10MouseClicked
         // TODO add your handling code here:
-        String Dia="Miercoles";
-        int Hora=16;
-        boolean valor=CM10.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CM10.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CM10MouseClicked
 
     private void CM11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CM11MouseClicked
         // TODO add your handling code here:
-        String Dia="Miercoles";
-        int Hora=17;
-        boolean valor=CM11.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CM11.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CM11MouseClicked
 
     private void CM12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CM12MouseClicked
         // TODO add your handling code here:
-        String Dia="Miercoles";
-        int Hora=18;
-        boolean valor=CM12.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CM12.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CM12MouseClicked
 
     private void CM13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CM13MouseClicked
         // TODO add your handling code here:
-        String Dia="Miercoles";
-        int Hora=19;
-        boolean valor=CM13.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CM13.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
+
     }//GEN-LAST:event_CM13MouseClicked
 
     private void CM14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CM14MouseClicked
         // TODO add your handling code here:
-        String Dia="Miercoles";
-        int Hora=20;
-        boolean valor=CM14.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CM14.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CM14MouseClicked
 
     private void CJ1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CJ1MouseClicked
         // TODO add your handling code here:
-        String Dia="Jueves";
-        int Hora=7;
-        boolean valor=CJ1.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CJ1.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CJ1MouseClicked
 
     private void CJ2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CJ2MouseClicked
         // TODO add your handling code here:
-        String Dia="Jueves";
-        int Hora=8;
-        boolean valor=CJ2.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CJ2.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CJ2MouseClicked
 
     private void CJ3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CJ3MouseClicked
         // TODO add your handling code here:
-        String Dia="Jueves";
-        int Hora=9;
-        boolean valor=CJ3.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CJ3.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CJ3MouseClicked
 
     private void CJ4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CJ4MouseClicked
         // TODO add your handling code here:
-        String Dia="Jueves";
-        int Hora=10;
-        boolean valor=CJ4.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CJ4.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CJ4MouseClicked
 
     private void CJ5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CJ5MouseClicked
         // TODO add your handling code here:
-        String Dia="Jueves";
-        int Hora=11;
-        boolean valor=CJ5.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CJ5.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CJ5MouseClicked
 
     private void CJ6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CJ6MouseClicked
         // TODO add your handling code here:
-        String Dia="Jueves";
-        int Hora=12;
-        boolean valor=CJ6.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CJ6.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CJ6MouseClicked
 
     private void CJ7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CJ7MouseClicked
         // TODO add your handling code here:
-        String Dia="Jueves";
-        int Hora=13;
-        boolean valor=CJ7.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CJ7.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CJ7MouseClicked
 
     private void CJ8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CJ8MouseClicked
         // TODO add your handling code here:
-        String Dia="Jueves";
-        int Hora=14;
-        boolean valor=CJ8.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CJ8.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CJ8MouseClicked
 
     private void CJ9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CJ9MouseClicked
         // TODO add your handling code here:
-        String Dia="Jueves";
-        int Hora=15;
-        boolean valor=CJ9.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CJ9.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
     }//GEN-LAST:event_CJ9MouseClicked
 
     private void CJ10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CJ10MouseClicked
         // TODO add your handling code here:
-        String Dia="Jueves";
-        int Hora=16;
-        boolean valor=CJ10.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CJ10.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CJ10MouseClicked
 
     private void CJ11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CJ11MouseClicked
         // TODO add your handling code here:
-        String Dia="Jueves";
-        int Hora=17;
-        boolean valor=CJ11.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CJ11.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
     }//GEN-LAST:event_CJ11MouseClicked
 
     private void CJ12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CJ12MouseClicked
         // TODO add your handling code here:
-        String Dia="Jueves";
-        int Hora=18;
-        boolean valor=CJ12.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CJ12.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CJ12MouseClicked
 
     private void CJ13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CJ13MouseClicked
         // TODO add your handling code here:
-        String Dia="Jueves";
-        int Hora=19;
-        boolean valor=CJ13.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CJ13.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CJ13MouseClicked
 
     private void CJ14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CJ14MouseClicked
         // TODO add your handling code here:
-        String Dia="Jueves";
-        int Hora=20;
-        boolean valor=CJ14.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CJ14.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CJ14MouseClicked
 
     private void CV1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CV1MouseClicked
         // TODO add your handling code here:
-        String Dia="Viernes";
-        int Hora=7;
-        boolean valor=CV1.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CV1.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CV1MouseClicked
 
     private void CV2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CV2MouseClicked
         // TODO add your handling code here:
-        String Dia="Viernes";
-        int Hora=8;
-        boolean valor=CV2.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CV2.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CV2MouseClicked
 
     private void CV3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CV3MouseClicked
         // TODO add your handling code here:
-        String Dia="Viernes";
-        int Hora=9;
-        boolean valor=CV3.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CV3.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CV3MouseClicked
 
     private void CV4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CV4MouseClicked
         // TODO add your handling code here:
-        String Dia="Viernes";
-        int Hora=10;
-        boolean valor=CV4.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CV4.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CV4MouseClicked
 
     private void CV5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CV5MouseClicked
         // TODO add your handling code here:
-        String Dia="Viernes";
-        int Hora=11;
-        boolean valor=CV5.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CV5.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CV5MouseClicked
 
     private void CV6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CV6MouseClicked
         // TODO add your handling code here:
-        String Dia="Viernes";
-        int Hora=12;
-        boolean valor=CV6.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CV6.setSelected(false);
-            }
-            else{
-            
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-                }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
+
     }//GEN-LAST:event_CV6MouseClicked
 
     private void CV7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CV7MouseClicked
         // TODO add your handling code here:
-        String Dia="Viernes";
-        int Hora=13;
-        boolean valor=CV7.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CV7.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CV7MouseClicked
 
     private void CV8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CV8MouseClicked
         // TODO add your handling code here:
-        String Dia="Viernes";
-        int Hora=14;
-        boolean valor=CV8.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CV8.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CV8MouseClicked
 
     private void CV9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CV9MouseClicked
         // TODO add your handling code here:
-        String Dia="Viernes";
-        int Hora=15;
-        boolean valor=CV9.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CV9.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CV9MouseClicked
 
     private void CV10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CV10MouseClicked
         // TODO add your handling code here:
-        String Dia="Viernes";
-        int Hora=16;
-        boolean valor=CV10.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CV10.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CV10MouseClicked
 
     private void CV11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CV11MouseClicked
         // TODO add your handling code here:
-        String Dia="Viernes";
-        int Hora=17;
-        boolean valor=CV11.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CV11.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
+
     }//GEN-LAST:event_CV11MouseClicked
 
     private void CV12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CV12MouseClicked
         // TODO add your handling code here:
-        String Dia="Viernes";
-        int Hora=18;
-        boolean valor=CV12.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CV12.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CV12MouseClicked
 
     private void CV13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CV13MouseClicked
         // TODO add your handling code here:
-        String Dia="Viernes";
-        int Hora=19;
-        boolean valor=CV13.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-            
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CV13.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CV13MouseClicked
 
     private void CV14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CV14MouseClicked
         // TODO add your handling code here:
-        String Dia="Viernes";
-        int Hora=20;
-        boolean valor=CV14.isSelected();
-        int horas=0;
-        int resul=0;
-        String numEm=ET1.getText();
-        int noEmpleado=Integer.parseInt(numEm);
-        horas=consultarHoras(noEmpleado);
-        
-        if(valor==true){
-            if(horas==0){
-                JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
-                CV14.setSelected(false);
-            }
-            else{
-                HorasRestantes();
-                ingresarDatos(Dia,Hora);
-                resul=horas-1;
-//                JOptionPane.showMessageDialog(null, "horas: "+resul);
-                entidadHoras.setNumeroEmpleado(noEmpleado);
-                entidadHoras.setHoras(resul);
-                controlhoras.modificarHoras(entidadHoras);
-            }
-        }
-        else{
-                if(valor==false){
-                    HorasSuma();
-                    eliminarDatos(Dia,Hora);
-                    resul=horas+1;
-//                    JOptionPane.showMessageDialog(null, "horas: "+resul);
-                    entidadHoras.setNumeroEmpleado(noEmpleado);
-                    entidadHoras.setHoras(resul);
-                    controlhoras.modificarHoras(entidadHoras);
-                }   
-            }
+
     }//GEN-LAST:event_CV14MouseClicked
 
     private void btnGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGuardarMouseClicked
@@ -4376,6 +2504,2559 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_btnSalirMouseClicked
+
+    private void CL2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CL2ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Lunes";
+            int Hora=8;
+            boolean valor=CL2.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CL2.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CL2ActionPerformed
+
+    private void CL3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CL3ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Lunes";
+            int Hora=9;
+            boolean valor=CL3.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CL3.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CL3ActionPerformed
+
+    private void CL4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CL4ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Lunes";
+            int Hora=10;
+            boolean valor=CL4.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CL4.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CL4ActionPerformed
+
+    private void CL5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CL5ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Lunes";
+            int Hora=11;
+            boolean valor=CL5.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CL5.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CL5ActionPerformed
+
+    private void CL6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CL6ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Lunes";
+            int Hora=12;
+            boolean valor=CL6.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CL6.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CL6ActionPerformed
+
+    private void CL7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CL7ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Lunes";
+            int Hora=13;
+            boolean valor=CL7.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CL7.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CL7ActionPerformed
+
+    private void CL8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CL8ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Lunes";
+            int Hora=14;
+            boolean valor=CL8.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CL8.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CL8ActionPerformed
+
+    private void CL9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CL9ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Lunes";
+            int Hora=15;
+            boolean valor=CL9.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CL9.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CL9ActionPerformed
+
+    private void CL10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CL10ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Lunes";
+            int Hora=16;
+            boolean valor=CL10.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CL10.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CL10ActionPerformed
+
+    private void CL11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CL11ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Lunes";
+            int Hora=17;
+            boolean valor=CL11.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CL11.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CL11ActionPerformed
+
+    private void CL12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CL12ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Lunes";
+            int Hora=18;
+            boolean valor=CL12.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CL12.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CL12ActionPerformed
+
+    private void CL13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CL13ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Lunes";
+            int Hora=19;
+            boolean valor=CL13.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CL13.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CL13ActionPerformed
+
+    private void CL14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CL14ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Lunes";
+            int Hora=20;
+            boolean valor=CL14.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CL14.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CL14ActionPerformed
+
+    private void CMA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMA1ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Martes";
+            int Hora=7;
+            boolean valor=CMA1.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CMA1.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CMA1ActionPerformed
+
+    private void CMA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMA2ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Martes";
+            int Hora=8;
+            boolean valor=CMA2.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CMA2.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CMA2ActionPerformed
+
+    private void CMA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMA3ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Martes";
+            int Hora=9;
+            boolean valor=CMA3.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CMA3.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CMA3ActionPerformed
+
+    private void CMA4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMA4ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Martes";
+            int Hora=10;
+            boolean valor=CMA4.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CMA4.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CMA4ActionPerformed
+
+    private void CMA5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMA5ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Martes";
+            int Hora=11;
+            boolean valor=CMA5.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CMA5.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CMA5ActionPerformed
+
+    private void CMA6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMA6ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Martes";
+            int Hora=12;
+            boolean valor=CMA6.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CMA6.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CMA6ActionPerformed
+
+    private void CMA7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMA7ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Martes";
+            int Hora=13;
+            boolean valor=CMA7.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CMA7.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CMA7ActionPerformed
+
+    private void CMA8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMA8ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Martes";
+            int Hora=14;
+            boolean valor=CMA8.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CMA8.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CMA8ActionPerformed
+
+    private void CMA9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMA9ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Martes";
+            int Hora=15;
+            boolean valor=CMA9.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CMA9.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CMA9ActionPerformed
+
+    private void CMA10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMA10ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Martes";
+            int Hora=16;
+            boolean valor=CMA10.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CMA10.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CMA10ActionPerformed
+
+    private void CMA11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMA11ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Martes";
+            int Hora=17;
+            boolean valor=CMA11.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CMA11.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CMA11ActionPerformed
+
+    private void CMA12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMA12ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Martes";
+            int Hora=18;
+            boolean valor=CMA12.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CMA12.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CMA12ActionPerformed
+
+    private void CMA13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMA13ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Martes";
+            int Hora=19;
+            boolean valor=CMA13.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CMA13.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CMA13ActionPerformed
+
+    private void CMA14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CMA14ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Martes";
+            int Hora=20;
+            boolean valor=CMA14.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CMA14.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CMA14ActionPerformed
+
+    private void CM1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CM1ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Miercoles";
+            int Hora=7;
+            boolean valor=CM1.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CM1.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CM1ActionPerformed
+
+    private void CM2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CM2ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Miercoles";
+            int Hora=8;
+            boolean valor=CM2.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CM2.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CM2ActionPerformed
+
+    private void CM3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CM3ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Miercoles";
+            int Hora=9;
+            boolean valor=CM3.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CM3.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CM3ActionPerformed
+
+    private void CM4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CM4ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Miercoles";
+            int Hora=10;
+            boolean valor=CM4.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CM4.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CM4ActionPerformed
+
+    private void CM5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CM5ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Miercoles";
+            int Hora=11;
+            boolean valor=CM5.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CM5.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CM5ActionPerformed
+
+    private void CM6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CM6ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Miercoles";
+            int Hora=12;
+            boolean valor=CM6.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CM6.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CM6ActionPerformed
+
+    private void CM7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CM7ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Miercoles";
+            int Hora=13;
+            boolean valor=CM7.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CM7.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CM7ActionPerformed
+
+    private void CM8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CM8ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Miercoles";
+            int Hora=14;
+            boolean valor=CM8.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CM8.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CM8ActionPerformed
+
+    private void CM9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CM9ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Miercoles";
+            int Hora=15;
+            boolean valor=CM9.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CM9.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CM9ActionPerformed
+
+    private void CM10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CM10ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Miercoles";
+            int Hora=16;
+            boolean valor=CM10.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CM10.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CM10ActionPerformed
+
+    private void CM11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CM11ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Miercoles";
+            int Hora=17;
+            boolean valor=CM11.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CM11.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CM11ActionPerformed
+
+    private void CM12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CM12ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Miercoles";
+            int Hora=18;
+            boolean valor=CM12.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CM12.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CM12ActionPerformed
+
+    private void CM13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CM13ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Miercoles";
+            int Hora=19;
+            boolean valor=CM13.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CM13.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CM13ActionPerformed
+
+    private void CM14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CM14ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Miercoles";
+            int Hora=20;
+            boolean valor=CM14.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CM14.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CM14ActionPerformed
+
+    private void CJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CJ1ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Jueves";
+            int Hora=7;
+            boolean valor=CJ1.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CJ1.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CJ1ActionPerformed
+
+    private void CJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CJ2ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Jueves";
+            int Hora=8;
+            boolean valor=CJ2.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CJ2.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CJ2ActionPerformed
+
+    private void CJ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CJ3ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Jueves";
+            int Hora=9;
+            boolean valor=CJ3.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CJ3.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CJ3ActionPerformed
+
+    private void CJ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CJ4ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Jueves";
+            int Hora=10;
+            boolean valor=CJ4.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CJ4.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CJ4ActionPerformed
+
+    private void CJ5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CJ5ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Jueves";
+            int Hora=11;
+            boolean valor=CJ5.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CJ5.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CJ5ActionPerformed
+
+    private void CJ6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CJ6ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Jueves";
+            int Hora=12;
+            boolean valor=CJ6.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CJ6.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CJ6ActionPerformed
+
+    private void CJ7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CJ7ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Jueves";
+            int Hora=13;
+            boolean valor=CJ7.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CJ7.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CJ7ActionPerformed
+
+    private void CJ8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CJ8ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Jueves";
+            int Hora=14;
+            boolean valor=CJ8.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CJ8.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CJ8ActionPerformed
+
+    private void CJ9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CJ9ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Jueves";
+            int Hora=15;
+            boolean valor=CJ9.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CJ9.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CJ9ActionPerformed
+
+    private void CJ10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CJ10ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Jueves";
+            int Hora=16;
+            boolean valor=CJ10.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CJ10.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CJ10ActionPerformed
+
+    private void CJ11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CJ11ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Jueves";
+            int Hora=17;
+            boolean valor=CJ11.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CJ11.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CJ11ActionPerformed
+
+    private void CJ12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CJ12ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Jueves";
+            int Hora=18;
+            boolean valor=CJ12.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CJ12.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CJ12ActionPerformed
+
+    private void CJ13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CJ13ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Jueves";
+            int Hora=19;
+            boolean valor=CJ13.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CJ13.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CJ13ActionPerformed
+
+    private void CJ14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CJ14ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Jueves";
+            int Hora=20;
+            boolean valor=CJ14.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CJ14.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CJ14ActionPerformed
+
+    private void CV1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV1ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Viernes";
+            int Hora=7;
+            boolean valor=CV1.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CV1.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CV1ActionPerformed
+
+    private void CV2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV2ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Viernes";
+            int Hora=8;
+            boolean valor=CV2.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CV2.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CV2ActionPerformed
+
+    private void CV3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV3ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Viernes";
+            int Hora=9;
+            boolean valor=CV3.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CV3.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CV3ActionPerformed
+
+    private void CV4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV4ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Viernes";
+            int Hora=10;
+            boolean valor=CV4.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CV4.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CV4ActionPerformed
+
+    private void CV5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV5ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Viernes";
+            int Hora=11;
+            boolean valor=CV5.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CV5.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CV5ActionPerformed
+
+    private void CV6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV6ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Viernes";
+            int Hora=12;
+            boolean valor=CV6.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CV6.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CV6ActionPerformed
+
+    private void CV7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV7ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Viernes";
+            int Hora=13;
+            boolean valor=CV7.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CV7.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CV7ActionPerformed
+
+    private void CV8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV8ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Viernes";
+            int Hora=14;
+            boolean valor=CV8.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CV8.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CV8ActionPerformed
+
+    private void CV9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV9ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Viernes";
+            int Hora=15;
+            boolean valor=CV9.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CV9.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CV9ActionPerformed
+
+    private void CV10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV10ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Viernes";
+            int Hora=16;
+            boolean valor=CV10.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CV10.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CV10ActionPerformed
+
+    private void CV11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV11ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Viernes";
+            int Hora=17;
+            boolean valor=CV11.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CV11.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CV11ActionPerformed
+
+    private void CV12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV12ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Viernes";
+            int Hora=18;
+            boolean valor=CV12.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CV12.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CV12ActionPerformed
+
+    private void CV13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV13ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Viernes";
+            int Hora=19;
+            boolean valor=CV13.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CV13.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CV13ActionPerformed
+
+    private void CV14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CV14ActionPerformed
+        // TODO add your handling code here:
+        String Dia="Viernes";
+            int Hora=20;
+            boolean valor=CV14.isSelected();
+            
+            int resul=0;
+            String numEm=ET1.getText();
+            int noEmpleado=Integer.parseInt(numEm);
+            String horaAsignada=txtRestantes.getText();
+            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            if(valor==true){
+                if(horasRestante==0){
+                    JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
+                    CV14.setSelected(false);
+//                    horasRestante=horasAsignadas+1;
+                }
+                else{
+                    HorasRestantes();
+                    ingresarDatos(Dia,Hora);
+                    horasRestante=horasAsignadas-1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+
+                }
+            }
+            else{
+                if(valor==false){
+                    HorasSuma();
+                    eliminarDatos(Dia,Hora);
+                    horasRestante=horasRestante+1;
+                    String canthoras=Integer.toString(horasRestante);
+                    txtRestantes.setText(canthoras);
+                }   
+            }
+    }//GEN-LAST:event_CV14ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

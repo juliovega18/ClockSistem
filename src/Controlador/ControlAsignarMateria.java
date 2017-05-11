@@ -82,7 +82,7 @@ public class ControlAsignarMateria {
         }
         
     }
-    public String consultaGeneral(int clave,int numEmpl){
+    public String consultaGeneralAsignarMateria(int clave,int numEmpl){
         String cadena="";
         sSQL="select * from maestro_has_materia WHERE Materia_ClaveMateria like '"+clave+"' AND Maestro_NumeroEmpleado like '"+numEmpl+"' ";
         

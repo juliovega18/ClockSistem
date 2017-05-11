@@ -84,7 +84,7 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
             }      
     }
     //PBI5:HU13:05 muestra los datos del maestro
-    public void mostrarDatosGeneral(int bus){
+    public void mostrarDatosMaestroGeneral(int bus){
         
         try {
             String cadenarecibe=controlMaestro.consultarMaestroEspecifico(bus);
@@ -110,7 +110,6 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
         btnAgregar.setEnabled(true);
         btnQuitar.setEnabled(true);
         btnCancelar.setEnabled(true);
-        txtNumeroEmpleado.setEnabled(false);
         cbxMaestro.setEnabled(false);
         btnAceptar.setEnabled(false);
     }
@@ -118,7 +117,6 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
         btnAgregar.setEnabled(false);
         btnQuitar.setEnabled(false);
         btnCancelar.setEnabled(false);
-        txtNumeroEmpleado.setEnabled(true);
         cbxMaestro.setEnabled(true);
         btnAceptar.setEnabled(true);
         cbxMaestro.setSelectedItem("Selecciona Maestro");
@@ -177,7 +175,6 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         cbxMaestro = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
-        txtNumeroEmpleado = new javax.swing.JTextField();
         btnAceptar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -388,8 +385,6 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
         jLabel5.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
         jLabel5.setText("Numero de Empleado");
 
-        txtNumeroEmpleado.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
-
         btnAceptar.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
         btnAceptar.setText("Aceptar");
         btnAceptar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -409,9 +404,7 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(txtNumeroEmpleado))
+                                .addComponent(jLabel5)
                                 .addGap(105, 105, 105)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(cbxMaestro, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -421,13 +414,11 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel5)
-                .addGap(7, 7, 7)
-                .addComponent(txtNumeroEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cbxMaestro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(cbxMaestro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(btnAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Materias", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Bodoni MT", 0, 18))); // NOI18N
@@ -492,7 +483,7 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -544,7 +535,7 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
             int numeroEm=Integer.parseInt(numeroEmpleado);
             
             //llama al metodos PBI5:HU13:05 muestra los datos del maestro
-            mostrarDatosGeneral(numeroEm);
+            mostrarDatosMaestroGeneral(numeroEm);
             //llama al metodo PBI5:HU13:06 Muestra la materias que se asigno al maestro
             mostrarEspecificoTabla();
             habilitar();
@@ -580,7 +571,7 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
             String clave=lista[0].trim();
             int claveAgregar=Integer.parseInt(clave);
             int numEmpleadoAgregar=Integer.parseInt(numEmpl);
-            String reci=controlAsigMateria.consultaGeneral(claveAgregar, numEmpleadoAgregar);
+            String reci=controlAsigMateria.consultaGeneralAsignarMateria(claveAgregar, numEmpleadoAgregar);
             
             
             //PBI5:HU13:04 valida si ya tiene asignada la materia
@@ -663,6 +654,5 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tbMateria;
-    private javax.swing.JTextField txtNumeroEmpleado;
     // End of variables declaration//GEN-END:variables
 }
