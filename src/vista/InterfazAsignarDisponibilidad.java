@@ -2170,6 +2170,7 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_CL14MouseClicked
 
+    //PBI6:HU15 como subdirector quiero dar alta la disponibilidad de Horario
     private void CL1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CL1ActionPerformed
         // TODO add your handling code here:
         String Dia="Lunes";
@@ -2181,14 +2182,17 @@ public class InterfazAsignarDisponibilidad extends javax.swing.JInternalFrame {
             String numEm=ET1.getText();
             int noEmpleado=Integer.parseInt(numEm);
             String horaAsignada=txtRestantes.getText();
-            int horasAsignadas=Integer.parseInt(horaAsignada);  
+            int horasAsignadas=Integer.parseInt(horaAsignada);
+            //PBI6:HU15:02 Valida que la casill de horario esta sin seleccionar para poder asignar horario
             if(valor==true){
+                //PBI6:HU15:03 Valida si cuenta con horas para asignar su disponibilidad
                 if(horasRestante==0){
                     JOptionPane.showMessageDialog(null, "Ya no cuenta con cantidad de horas disponibles para asignar");
                     CL1.setSelected(false);
 //                    horasRestante=horasAsignadas+1;
                 }
                 else{
+                    //PBI5:HU5:01 Da de alta disponibilidad de horario
                     HorasRestantes();
                     ingresarDatos(Dia,Hora);
                     horasRestante=horasAsignadas-1;
