@@ -87,7 +87,6 @@ public class JfInterfazReporte extends javax.swing.JInternalFrame {
         JpBotones.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         btnConsultar.setFont(new java.awt.Font("Britannic Bold", 0, 14)); // NOI18N
-        btnConsultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa-icono-3813-32.png"))); // NOI18N
         btnConsultar.setText("Buscar");
         btnConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,7 +95,6 @@ public class JfInterfazReporte extends javax.swing.JInternalFrame {
         });
 
         btnCancelar.setFont(new java.awt.Font("Britannic Bold", 0, 14)); // NOI18N
-        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/eliminar-cancelar-icono-4935-32.png"))); // NOI18N
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,7 +103,6 @@ public class JfInterfazReporte extends javax.swing.JInternalFrame {
         });
 
         btnImprimir.setFont(new java.awt.Font("Britannic Bold", 0, 14)); // NOI18N
-        btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imprimir-icono-5119-32.png"))); // NOI18N
         btnImprimir.setText("Imprimir");
         btnImprimir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -235,7 +232,7 @@ public class JfInterfazReporte extends javax.swing.JInternalFrame {
             .addGroup(JpTablaLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

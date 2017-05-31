@@ -83,7 +83,8 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
 
             }      
     }
-    public void mostrarDatosGeneral(int bus){
+    //PBI5:HU13:05 muestra los datos del maestro
+    public void mostrarDatosMaestroGeneral(int bus){
         
         try {
             String cadenarecibe=controlMaestro.consultarMaestroEspecifico(bus);
@@ -94,7 +95,6 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
             NumeroEmpleado.setText(numeroemp);
             NombreMaestro.setText(nombreCompleto);
             HorasAsignadas.setText(horasAsig);
-//            JOptionPane.showMessageDialog(null, "Mensaje: "+numeroemp+"\nNombre: "+nombreCompleto+"\nHorasAsignadas: "+horasAsig);
         } catch (SQLException ex) {
             Logger.getLogger(InterfazAsignarMateria.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -110,7 +110,6 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
         btnAgregar.setEnabled(true);
         btnQuitar.setEnabled(true);
         btnCancelar.setEnabled(true);
-        txtNumeroEmpleado.setEnabled(false);
         cbxMaestro.setEnabled(false);
         btnAceptar.setEnabled(false);
     }
@@ -118,13 +117,12 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
         btnAgregar.setEnabled(false);
         btnQuitar.setEnabled(false);
         btnCancelar.setEnabled(false);
-        txtNumeroEmpleado.setEnabled(true);
         cbxMaestro.setEnabled(true);
         btnAceptar.setEnabled(true);
         cbxMaestro.setSelectedItem("Selecciona Maestro");
         iniciar();
     }
-    
+    //PBI5:HU13:06 Muestra la materias que se asigno al maestro
     void mostrarEspecificoTabla(){
         try {
             String buscar=NumeroEmpleado.getText();
@@ -177,7 +175,6 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         cbxMaestro = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
-        txtNumeroEmpleado = new javax.swing.JTextField();
         btnAceptar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -292,7 +289,7 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
         jPanel7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnQuitar.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
-        btnQuitar.setText("Quitar");
+        btnQuitar.setText("Eliminar");
         btnQuitar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnQuitarMouseClicked(evt);
@@ -304,6 +301,11 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
         btnCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnCancelarMouseClicked(evt);
+            }
+        });
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
             }
         });
 
@@ -322,9 +324,9 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnQuitar)
-                .addGap(18, 18, 18)
-                .addComponent(btnCancelar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
+                .addComponent(btnCancelar)
+                .addGap(18, 18, 18)
                 .addComponent(btnSalir)
                 .addContainerGap())
         );
@@ -383,8 +385,6 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
         jLabel5.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
         jLabel5.setText("Numero de Empleado");
 
-        txtNumeroEmpleado.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
-
         btnAceptar.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
         btnAceptar.setText("Aceptar");
         btnAceptar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -404,9 +404,7 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(txtNumeroEmpleado))
+                                .addComponent(jLabel5)
                                 .addGap(105, 105, 105)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(cbxMaestro, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -416,17 +414,20 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel5)
-                .addGap(7, 7, 7)
-                .addComponent(txtNumeroEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cbxMaestro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(cbxMaestro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(btnAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Materias", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Bodoni MT", 0, 18))); // NOI18N
 
+        Lista.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                ListaValueChanged(evt);
+            }
+        });
         jScrollPane2.setViewportView(Lista);
 
         btnAgregar.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
@@ -434,6 +435,11 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
         btnAgregar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnAgregarMouseClicked(evt);
+            }
+        });
+        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarActionPerformed(evt);
             }
         });
 
@@ -477,7 +483,7 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -527,9 +533,10 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
             datos=maestroSeleccion.split("-");
             String numeroEmpleado=datos[0].trim();
             int numeroEm=Integer.parseInt(numeroEmpleado);
-
-//            JOptionPane.showMessageDialog(null, "Maestro: "+numeroEmpleado);
-            mostrarDatosGeneral(numeroEm);
+            
+            //llama al metodos PBI5:HU13:05 muestra los datos del maestro
+            mostrarDatosMaestroGeneral(numeroEm);
+            //llama al metodo PBI5:HU13:06 Muestra la materias que se asigno al maestro
             mostrarEspecificoTabla();
             habilitar();
         }
@@ -538,6 +545,7 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
 
     private void btnCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelarMouseClicked
         // TODO add your handling code here:
+        Lista.setSelectedValue(null, false);
         habilitarLimpiar();
         clear_tabla();
     }//GEN-LAST:event_btnCancelarMouseClicked
@@ -546,59 +554,79 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_btnSalirMouseClicked
-
+//  PBI5:HU13:01 Evento Se debe asignar una materia
     private void btnAgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarMouseClicked
-        // TODO add your handling code here:
-        String valor=Lista.getSelectedValue().toString();
-        String numEmpl=NumeroEmpleado.getText();
-        lista=valor.split("-");
-        String clave=lista[0].trim();
-        int claveAgregar=Integer.parseInt(clave);
-        int numEmpleadoAgregar=Integer.parseInt(numEmpl);
-        String reci=controlAsigMateria.consultaGeneral(claveAgregar, numEmpleadoAgregar);
-        if(reci.equalsIgnoreCase("")){
-            JOptionPane.showMessageDialog(null, "No se encontro mensaje deste interfaz");
-            modeloAsignar.setNumeroEmpleado(numEmpleadoAgregar);
-            modeloAsignar.setClaveMateria(claveAgregar);
-            controlAsigMateria.registrarGrupo(modeloAsignar);
-//        mostrarEspecificoTabla(numeroEm);
-        JOptionPane.showMessageDialog(null, "clave: "+claveAgregar+"\n numeroEmpleado: "+numEmpleadoAgregar);
-        mostrarEspecificoTabla();
-        }else{
-            JOptionPane.showMessageDialog(null, "ya tiene asignada la materia");
-                    
-            
+ 
+        // PBI5:HU13:03 valida si selecciona la materia para asignar
+        int n=Lista.getSelectedIndex();
+        if(n<1){
+            JOptionPane.showMessageDialog(null, "Seleccione una materia para Agregar");
+        
         }
-
+        else
+        {
+            String valor=Lista.getSelectedValue().toString();
+            String numEmpl=NumeroEmpleado.getText();
+            lista=valor.split("-");
+            String clave=lista[0].trim();
+            int claveAgregar=Integer.parseInt(clave);
+            int numEmpleadoAgregar=Integer.parseInt(numEmpl);
+            String reci=controlAsigMateria.consultaGeneralAsignarMateria(claveAgregar, numEmpleadoAgregar);
+            
+            
+            //PBI5:HU13:04 valida si ya tiene asignada la materia
+            if(reci.equalsIgnoreCase(""))
+            {
+                modeloAsignar.setNumeroEmpleado(numEmpleadoAgregar);
+                modeloAsignar.setClaveMateria(claveAgregar);
+                controlAsigMateria.registrarAsignarMateria(modeloAsignar);
+                //PBI5:HU13:06 Muestra la materias que se asigno al maestro
+                mostrarEspecificoTabla();
+            }else{
+                JOptionPane.showMessageDialog(null, "ya tiene asignada la materia");
+            }
+        }
     }//GEN-LAST:event_btnAgregarMouseClicked
-
+    // PBI5:HU14:01 Evento que manda a eliminar la materia asignada al maestro
     private void btnQuitarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnQuitarMouseClicked
 
             // TODO add your handling code here:
+            
             String clave="";
             int fila=tbMateria.getSelectedRow();
-            
-            clave=tbMateria.getValueAt(fila, 0).toString();
-            int claveMa=Integer.parseInt(clave);
-            JOptionPane.showMessageDialog(null, "Clave materia: "+clave);
-            int confirmacion =JOptionPane.showConfirmDialog(null,"Seguro deseas eliminar","Clave Materia: "+clave,JOptionPane.YES_NO_OPTION);
-            
-            if(confirmacion==0){
-                modeloAsignar.setClaveMateria(claveMa);
-                controlAsigMateria.eliminarAsignarMateria(modeloAsignar);
-                mostrarEspecificoTabla();
+            //PBI:HU14:03 Valida si se seleccionó materia para eliminar 
+            if(fila<0){
+                JOptionPane.showMessageDialog(null, "Seleccione materia a eliminar");
             }
             else{
-                JOptionPane.showMessageDialog(null, "Se Cancelo La Eliminacion");
-            }
-            
-            
-            
-            
-
-
-        
+                clave=tbMateria.getValueAt(fila, 0).toString();
+                int claveMa=Integer.parseInt(clave);
+                int confirmacion =JOptionPane.showConfirmDialog(null,"Seguro deseas eliminar","Clave Materia: "+clave,JOptionPane.YES_NO_OPTION);
+                if(confirmacion==0){
+                    modeloAsignar.setClaveMateria(claveMa);
+                    controlAsigMateria.eliminarAsignarMateria(modeloAsignar);
+                    
+                    //PBI5:HU13:06 Muestra la materias que se asigno al maestro
+                    mostrarEspecificoTabla();
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "Se Cancelo La Eliminacion");
+                }
+            }    
     }//GEN-LAST:event_btnQuitarMouseClicked
+
+    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAgregarActionPerformed
+
+    private void ListaValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_ListaValueChanged
+        // TODO add your handling code here:
+//        int n=
+    }//GEN-LAST:event_ListaValueChanged
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -626,6 +654,5 @@ public class InterfazAsignarMateria extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tbMateria;
-    private javax.swing.JTextField txtNumeroEmpleado;
     // End of variables declaration//GEN-END:variables
 }

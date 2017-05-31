@@ -67,7 +67,6 @@ public class JfInterfazPrincipal extends javax.swing.JFrame {
 
         JpOpciones.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir-de-mi-perfil-icono-3964-32.png"))); // NOI18N
         btnSalir.setText("Salir");
         btnSalir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -111,7 +110,6 @@ public class JfInterfazPrincipal extends javax.swing.JFrame {
         lbResportes.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jButton1.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/reportes.JPG"))); // NOI18N
         jButton1.setText("Reportes");
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -158,7 +156,6 @@ public class JfInterfazPrincipal extends javax.swing.JFrame {
         lbHorario.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnHorario.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
-        btnHorario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fecha-icono-7111-48.png"))); // NOI18N
         btnHorario.setText("Horario");
         btnHorario.setToolTipText("Generar Horario");
         btnHorario.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -176,7 +173,6 @@ public class JfInterfazPrincipal extends javax.swing.JFrame {
         });
 
         jButton2.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/trabajo-de-la-escuela-icono-4043-48.png"))); // NOI18N
         jButton2.setText("Asignar Materias");
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -188,7 +184,6 @@ public class JfInterfazPrincipal extends javax.swing.JFrame {
         });
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/llamar-icono-4093-48.png"))); // NOI18N
         jButton3.setText("Dispo. Maestro");
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -231,7 +226,6 @@ public class JfInterfazPrincipal extends javax.swing.JFrame {
         JpCatalogo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnMaterias.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
-        btnMaterias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/accesorios-diccionario-icono-5663-48.png"))); // NOI18N
         btnMaterias.setText("Materias");
         btnMaterias.setToolTipText("Materias");
         btnMaterias.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -244,7 +238,6 @@ public class JfInterfazPrincipal extends javax.swing.JFrame {
         });
 
         btnMaestros.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
-        btnMaestros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Profile.png"))); // NOI18N
         btnMaestros.setText("Maestros");
         btnMaestros.setToolTipText("Maestros");
         btnMaestros.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -263,7 +256,6 @@ public class JfInterfazPrincipal extends javax.swing.JFrame {
         lbCatalologo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnGrupos.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
-        btnGrupos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/grupo-de-usuarios-foro-de-los-pueblos-icono-9348-48.png"))); // NOI18N
         btnGrupos.setText("Grupos");
         btnGrupos.setToolTipText("Grupo");
         btnGrupos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -276,7 +268,6 @@ public class JfInterfazPrincipal extends javax.swing.JFrame {
         });
 
         btnSalones.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
-        btnSalones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/beos-blocks-icone-3763-48.png"))); // NOI18N
         btnSalones.setText("Salones");
         btnSalones.setToolTipText("salon");
         btnSalones.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
