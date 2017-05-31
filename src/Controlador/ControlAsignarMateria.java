@@ -25,7 +25,7 @@ public class ControlAsignarMateria {
     private String sSQL="";
     
     public boolean registrarAsignarMateria(EntidadAsignarMateria dts){
-        sSQL="insert into maestro_has_materia (Maestro_NumeroEmpleado,Materia_ClaveMateria)"+"values (?,?)";
+        sSQL="insert into asignarmateria (Maestro_NumeroEmpleado,Materia_ClaveMateria)"+"values (?,?)";
         
         try{
             PreparedStatement pst=cn.prepareStatement(sSQL);
@@ -59,7 +59,7 @@ public class ControlAsignarMateria {
         
         modelo=new DefaultTableModel(null,titulos);
         
-        sSQL="select * from materia INNER JOIN maestro_has_materia ON materia.ClaveMateria=maestro_has_materia.Materia_ClaveMateria where maestro_has_materia.Maestro_NumeroEmpleado like '%"+ buscar +"%' order by Maestro_NumeroEmpleado";
+        sSQL="select * from materia INNER JOIN asignarmateria ON materia.ClaveMateria=asignarmateria.Materia_ClaveMateria where asignarmateria.Maestro_NumeroEmpleado like '%"+ buscar +"%' order by Maestro_NumeroEmpleado";
         
         try{
             Statement st=cn.createStatement();
@@ -84,7 +84,7 @@ public class ControlAsignarMateria {
     }
     public String consultaGeneralAsignarMateria(int clave,int numEmpl){
         String cadena="";
-        sSQL="select * from maestro_has_materia WHERE Materia_ClaveMateria like '"+clave+"' AND Maestro_NumeroEmpleado like '"+numEmpl+"' ";
+        sSQL="select * from asignarmateria WHERE Materia_ClaveMateria like '"+clave+"' AND Maestro_NumeroEmpleado like '"+numEmpl+"' ";
         
         try{
             Statement st=cn.createStatement();
@@ -109,7 +109,7 @@ public class ControlAsignarMateria {
         return cadena;
     }
     public boolean eliminarAsignarMateria(EntidadAsignarMateria dts){
-        sSQL="delete from maestro_has_materia where Materia_ClaveMateria=?";
+        sSQL="delete from asignarmateria where Materia_ClaveMateria=?";
         try{
             PreparedStatement pst=cn.prepareStatement(sSQL);
             
@@ -139,7 +139,7 @@ public class ControlAsignarMateria {
         modelo=new DefaultTableModel(null,titulos);
         
         String cadena="";
-        sSQL="select NombreMateria,Horas,Materia_ClaveMateria FROM materia,maestro_has_materia WHERE materia.ClaveMateria=Maestro_has_materia.Materia_ClaveMateria AND Maestro_NumeroEmpleado like '"+bus+"' ";
+        sSQL="select NombreMateria,Horas,Materia_ClaveMateria FROM materia,asignarmateria WHERE materia.ClaveMateria=asignarmateria.Materia_ClaveMateria AND Maestro_NumeroEmpleado like '"+bus+"' ";
         try{
             Statement st=cn.createStatement();
             ResultSet rs=st.executeQuery(sSQL);

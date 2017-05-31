@@ -307,7 +307,7 @@ public class ControlHorario {
     /*Metodo  que registra   los  datos  de la tabla de horario */
     public boolean RegistrarHorario(EntidadHorario dts) {
 
-        sSQL = "insert into horario (TipoActividad,Dia,Hora,NumeroEmpleado,ClaveMateria,NumGrupo,NumSalon) "+
+        sSQL = "insert into horario (TipoActividad,Dia,Hora,NumeroEmpleado,ClaveMateria,NumGrupo,idSalon) "+
                 "values (?,?,?,?,?,?,?)";
 
         try {
@@ -320,6 +320,40 @@ public class ControlHorario {
             ps.setInt(5, dts.getClaveMateria());
             ps.setInt(6, dts.getNumGrupo());
             ps.setInt(7, dts.getNumSalon());
+
+            int n = ps.executeUpdate();
+//            JOptionPane.showConfirmDialog(null, n);
+
+//            if (n != 0) {
+            if (n != 0) {
+                return true;
+            } else {
+                return false;
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(null, e);
+
+            return false;
+
+        }
+
+    }
+    public boolean RegistrarHorarioProyectos(EntidadHorario dts) {
+
+        sSQL = "insert into horario (TipoActividad,Dia,Hora,NumeroEmpleado,ClaveMateria) "+
+                "values (?,?,?,?,?)";
+
+        try {
+
+            ps = connection.prepareStatement(sSQL);
+            ps.setString(1, dts.getTipoActividad());
+            ps.setString(2, dts.getDia());
+            ps.setInt(3, dts.getHora());
+            ps.setInt(4, dts.getNumEmpleado());
+            ps.setInt(5, dts.getClaveMateria());
+//            ps.setInt(6, dts.getNumGrupo());
+//            ps.setInt(7, dts.getNumSalon());
 
             int n = ps.executeUpdate();
             JOptionPane.showConfirmDialog(null, n);
@@ -775,5 +809,58 @@ public class ControlHorario {
         }
 
     }
+    
+    public int consultarGrupoMateria(int idMateria,int grupo){
+        int cadena=0;
+            
+            
+            sSQL="select idHorario from horario where ClaveMateria like '"+ idMateria +"';";
+            
+try{
+            Statement st=connection.createStatement();
+            ResultSet rs=st.executeQuery(sSQL);
+            
+            while(rs.next()){
+                int idhorario=rs.getInt("idHorario");
+
+
+                cadena=cadena+idhorario;
+                
+            }
+            
+                return cadena;
+            
+            
+            
+        }catch(Exception e){
+            JOptionPane.showConfirmDialog(null, e);
+            return cadena;
+        }
+    }
+    public boolean eliminarHora(EntidadHorario dts){
+        sSQL="delete from horario where NumeroEmpleado=? AND Dia=? AND Hora=?";
+        try{
+            PreparedStatement pst=connection.prepareStatement(sSQL);
+            
+            
+            pst.setInt(1, dts.getNumEmpleado());
+            pst.setString(2, dts.getDia());
+            pst.setInt(3, dts.getHora());
+            int n=pst.executeUpdate();
+            
+            if(n!=0){
+                return true;
+            }
+            else{
+                return false;
+            }
+            
+        }catch(Exception e){
+            JOptionPane.showConfirmDialog(null, e);
+            return false;
+        }
+        
+    }
+    
 
 }

@@ -23,7 +23,7 @@ public class ControlDisponibilidad {
     private String sSQL="";
     
     public boolean registrarDisponibilidad(EntidadDisponibilidad dts){
-        sSQL="insert into horario_disponible (Maestro_NumeroEmpleado,Dia,Hora)"+"values (?,?,?)";
+        sSQL="insert into disponibilidahorario (Maestro_NumeroEmpleado,Dia,Hora)"+"values (?,?,?)";
         
         try{
             PreparedStatement pst=cn.prepareStatement(sSQL);
@@ -50,7 +50,7 @@ public class ControlDisponibilidad {
     }
     public void consultarAsignacion(int numeroEmpleado){
         String cadena="";
-        sSQL="select * from horas_asignadas where Maestro_NumeroEmpleado = '"+numeroEmpleado+"' ";
+        sSQL="select * from disponibilidahorario where Maestro_NumeroEmpleado = '"+numeroEmpleado+"' ";
         try{
             Statement st=cn.createStatement();
             ResultSet rs=st.executeQuery(sSQL);
@@ -88,7 +88,7 @@ public class ControlDisponibilidad {
     }
     
     public boolean eliminarDisponibilidad(EntidadDisponibilidad dts){
-        sSQL="delete from horario_disponible where Maestro_NumeroEmpleado=? AND Dia=? AND Hora=?";
+        sSQL="delete from disponibilidahorario where Maestro_NumeroEmpleado=? AND Dia=? AND Hora=?";
         try{
             PreparedStatement pst=cn.prepareStatement(sSQL);
             
@@ -113,7 +113,7 @@ public class ControlDisponibilidad {
     }
     public int consultarHorasAsignadas(int numeroEmpleado){
         int contador=0;
-        sSQL="select count(*) from horario_disponible where Maestro_NumeroEmpleado = "+numeroEmpleado+" ";
+        sSQL="select count(*) from disponibilidahorario where Maestro_NumeroEmpleado = "+numeroEmpleado+" ";
         try{
             Statement st=cn.createStatement();
             ResultSet rs=st.executeQuery(sSQL);

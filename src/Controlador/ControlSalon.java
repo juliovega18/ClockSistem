@@ -166,7 +166,7 @@ public class ControlSalon {
         
         DefaultListModel modelo=new DefaultListModel();
         
-        sSQL="select NumSalon from salon ;";
+        sSQL="select idSalon, NumSalon from salon ;";
         
         try{
             Statement st=cn.createStatement();
