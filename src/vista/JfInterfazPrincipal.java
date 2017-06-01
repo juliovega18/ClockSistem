@@ -369,7 +369,7 @@ public class JfInterfazPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.jdpEscritorio.removeAll();
         this.jdpEscritorio.repaint();
-        JfInterfazGrupo Grupo = new JfInterfazGrupo();
+        InterfazGrupo Grupo = new InterfazGrupo();
         Grupo.setVisible(true);
         jdpEscritorio.add(Grupo);
 //        lbImagen.setVisible(true);

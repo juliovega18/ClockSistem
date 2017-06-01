@@ -16,16 +16,14 @@ import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author julve
- */
+
 public class ControlGrupo {
 
     private Conexion mysql = new Conexion();
     private Connection cn = mysql.conectar();
     private String sSQL = "";
-
+    
+   //  PBI2:HU04:  MÉTODO QUE REGISTRA UN GRUPO
     public boolean registrarGrupo(EntidadGrupo dts) {
         sSQL = "insert into grupo (NumGrupo,Semestre)" + "values (?,?)";
 
@@ -35,27 +33,27 @@ public class ControlGrupo {
             pst.setInt(2, dts.getSemestre());
 
             int n = pst.executeUpdate();
-//            JOptionPane.showMessageDialog(null, "Los datos del grupo han sido actualizados");
+           
 
             if (n != 0) {
                 return true;
             } else {
                 return false;
             }
-
+//VALIDA SI UN Numero de GRUPO existe
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Ya existe el grupo");
 
             return false;
         }
     }
-
+//MÉTODO  QUE MUESTRA LOS  DATOS  EN  LA TABLA
     public DefaultTableModel ConsultarGrupo(String buscar) throws SQLException {
         DefaultTableModel modelo;
 
-        String[] titulos = {"Numero de Grupo"};
+        String[] titulos = {"Número de Grupo", "Semestre"};
 
-        String[] Grupos = new String[1];
+        String[] Grupos = new String[2];
 
         modelo = new DefaultTableModel(null, titulos);
 
@@ -67,19 +65,20 @@ public class ControlGrupo {
 
             while (rs.next()) {
                 Grupos[0] = rs.getString("NumGrupo");
-
+                Grupos[1] = rs.getString("Semestre");
                 modelo.addRow(Grupos);
 
             }
             return modelo;
 
         } catch (Exception e) {
-            JOptionPane.showConfirmDialog(null, "El numero de grupo no exite");
-            return null;
-        }
+            
+            JOptionPane.showConfirmDialog(null, "El numero de grupo no exite" + modelo);
+            
+        }return null;
 
     }
-
+//  PBI2:HU06  MÉTODO PARA ELIMINAR UN GRUPO
     public boolean eliminarGrupo(EntidadGrupo dts) {
         sSQL = "delete from grupo where NumGrupo=?";
         try {
@@ -100,12 +99,13 @@ public class ControlGrupo {
         }
 
     }
-
+//   PBI2:HU05:  MÉTODO QUE MODIFICA UN GRUPO
     public boolean modificarGrupo(EntidadGrupo dts, int buscar) {
-        sSQL = "update grupo set NumGrupo=? where NumGrupo like '%" + buscar + "%'";
+        sSQL = "update grupo set NumGrupo=?, Semestre=? where NumGrupo like '%" + buscar + "%'";
         try {
             PreparedStatement pst = cn.prepareStatement(sSQL);
             pst.setInt(1, dts.getNumeroGrupo());
+            pst.setInt(2, dts.getSemestre());
 
             int n = pst.executeUpdate();
 
@@ -123,7 +123,7 @@ public class ControlGrupo {
         }
 
     }
-
+    //METODO QUE CONSULTA UN  GRUPO  ESPECÍFICO
     public String consultarGrupoEspecifico(String buscar) throws SQLException {
         String cadena = "";
 
@@ -135,8 +135,9 @@ public class ControlGrupo {
 
             while (rs.next()) {
                 String numSalon = rs.getString("NumGrupo");
-
-                cadena = cadena + numSalon;
+                String semestre= rs.getString("Semestre");
+                cadena = cadena + numSalon + "-" + semestre;
+               
             }
 
             return cadena;
@@ -148,19 +149,16 @@ public class ControlGrupo {
 
     }
 
-    /*Metodo que extrae el grupo  asignado al horario */
-    
-      public int consultarGrupoTieneHorario(int grupo) throws SQLException {
+//   MÉTODO QUE VALIDA SI EL  GRUPO TIENE  UN HORARIO  ASIGNADO PARA NO MODIFICARLO O ELIMINARLO
+        public int consultarGrupoTieneHorario(int grupo) throws SQLException {
         int cadena = 0;
 
-//        sSQL = "select * from grupo where NumGrupo like '%" + buscar + "%' order by NumGrupo";
-//        sSQL = "select NumGrupo from horario, grupo where horario.NumeroGrupo and grupo.NumGrupo like '%" + grupo + "%';";
-   sSQL = "select NumeroGrupo  from horario where NumeroGrupo like '%" + grupo + "%';";
+   sSQL = "select NumGrupo  from horario where NumGrupo like '%" + grupo + "%';";
             Statement st = cn.createStatement();
             ResultSet rs = st.executeQuery(sSQL);
 
             while (rs.next()) {
-                int numSalon = rs.getInt("NumeroGrupo");
+                int numSalon = rs.getInt("NumGrupo");
 
                 cadena = cadena + numSalon;
             }
