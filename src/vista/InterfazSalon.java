@@ -17,29 +17,28 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author julve
  */
-public class JfInterfazSalon extends javax.swing.JInternalFrame {
+public class InterfazSalon extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form InterfazSalon1
      */
-    
-    EntidadSalon modelSalon=new EntidadSalon();
-    ControlSalon controlSalon1=new ControlSalon();
-    int salon=0;
-    String imagen="";
-    
+    EntidadSalon modelSalon = new EntidadSalon();
+    ControlSalon controlSalon = new ControlSalon();
+    String salon = "";
+    String imagen = "";
+
     DefaultTableModel Modelo1;
-    
-    public JfInterfazSalon() {
-        this.setLocation(380,20);
+
+    public InterfazSalon() {
+        this.setLocation(380, 20);
         this.setTitle("Control de Salon");
         initComponents();
-        mostrar("");
+        mostrarDatos();
         inhabilitar();
     }
-    
-    void inhabilitar(){
-        
+
+    void inhabilitar() {
+
         btnModificar.setEnabled(false);
         btnEliminar.setEnabled(false);
         btnRegistrar.setEnabled(true);
@@ -48,43 +47,41 @@ public class JfInterfazSalon extends javax.swing.JInternalFrame {
         txtNumeroSalon.setText("");
         txtNumeroSalon.setEnabled(true);
         btnRegistrar.setText("Registrar");
-     
+
     }
-    
-    void habilitar(){
-        
+
+    void habilitar() {
+
         btnModificar.setEnabled(true);
         btnEliminar.setEnabled(true);
         btnRegistrar.setEnabled(false);
         txtNumeroSalon.setEnabled(false);
         btnRegistrar.setText("Registrar");
-        
+
     }
-    
-    void habilitarModificar(){
+
+    void habilitarModificar() {
         btnModificar.setEnabled(false);
         btnEliminar.setEnabled(false);
         btnRegistrar.setEnabled(true);
         txtNumeroSalon.setEnabled(true);
         btnRegistrar.setText("Guardar Cambios");
-        
 
     }
-    
-   
-    
-    void mostrar(String buscar){
-        try {
-        
-            Modelo1=controlSalon1.consultarSalon(buscar);
-            tbSalon.setModel(Modelo1);
-            
 
-        
+//    MUESTRA  DATOS  EN LA TABLA
+    void mostrarDatos() {
+        try {
+
+            Modelo1 = controlSalon.consultarSalon();
+            tbSalon.setModel(Modelo1);
+//            oculta  culumna en tabla
+            tbSalon.getColumnModel().getColumn(0).setMaxWidth(0);
+
         } catch (SQLException ex) {
-            Logger.getLogger(JfInterfazMaestro.class.getName()).log(Level.SEVERE, null, ex);
+//            Logger.getLogger(InterfazMaestro.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }
 
     /**
@@ -116,13 +113,15 @@ public class JfInterfazSalon extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
+        setPreferredSize(new java.awt.Dimension(590, 474));
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Detalle Salon", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Bodoni MT", 0, 18))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Detalle Salón", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Bodoni MT", 0, 18))); // NOI18N
 
         lbNumeroSalon.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lbNumeroSalon.setText("Numero de Salon");
+        lbNumeroSalon.setText("Número o nombre de Salón");
 
         txtNumeroSalon.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
+        txtNumeroSalon.setToolTipText("Escribe número o nombre  de  salón");
         txtNumeroSalon.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtNumeroSalonKeyTyped(evt);
@@ -137,7 +136,7 @@ public class JfInterfazSalon extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(lbNumeroSalon)
                 .addGap(18, 18, 18)
-                .addComponent(txtNumeroSalon, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtNumeroSalon, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -147,15 +146,16 @@ public class JfInterfazSalon extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbNumeroSalon, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtNumeroSalon, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Consulta Salon", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Bodoni MT", 1, 18))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Consulta Salón", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Bodoni MT", 1, 18))); // NOI18N
 
         lbBuscarSalon.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lbBuscarSalon.setText("Numero de Salon");
+        lbBuscarSalon.setText("Número o nombre de Salón");
 
         txtBuscarSalon.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
+        txtBuscarSalon.setToolTipText("Escribe número o nombre  de  salón");
         txtBuscarSalon.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtBuscarSalonKeyTyped(evt);
@@ -166,20 +166,20 @@ public class JfInterfazSalon extends javax.swing.JInternalFrame {
 
         tbSalon.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null}
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
             },
             new String [] {
-                "Numero Salon"
+
             }
         ));
         tbSalon.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -195,18 +195,19 @@ public class JfInterfazSalon extends javax.swing.JInternalFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         btnBuscarSalon.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
+        btnBuscarSalon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa-icono-3813-32.png"))); // NOI18N
         btnBuscarSalon.setText("Buscar");
         btnBuscarSalon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -223,32 +224,31 @@ public class JfInterfazSalon extends javax.swing.JInternalFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbBuscarSalon)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(txtBuscarSalon, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtBuscarSalon, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnBuscarSalon)))
-                .addGap(18, 18, Short.MAX_VALUE)
+                        .addComponent(btnBuscarSalon, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 12, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbBuscarSalon, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(25, 25, 25)
+                .addComponent(lbBuscarSalon)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtBuscarSalon, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtBuscarSalon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBuscarSalon))
-                .addGap(33, 33, 33))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnRegistrar.setBackground(new java.awt.Color(102, 102, 102));
         btnRegistrar.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
+        btnRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/aceptar-o-no-la-correcta-seleccione-aceptar-verde-si-icono-9162-32.png"))); // NOI18N
         btnRegistrar.setText("Registrar");
         btnRegistrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnRegistrar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -266,6 +266,7 @@ public class JfInterfazSalon extends javax.swing.JInternalFrame {
 
         btnModificar.setBackground(new java.awt.Color(102, 102, 102));
         btnModificar.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/signatura-icono-8756-32.png"))); // NOI18N
         btnModificar.setText("Modificar");
         btnModificar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnModificar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -278,6 +279,7 @@ public class JfInterfazSalon extends javax.swing.JInternalFrame {
 
         btnEliminar.setBackground(new java.awt.Color(102, 102, 102));
         btnEliminar.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cuadrados-eliminar-icono-7310-32.png"))); // NOI18N
         btnEliminar.setText("Eliminar");
         btnEliminar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnEliminar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -290,6 +292,7 @@ public class JfInterfazSalon extends javax.swing.JInternalFrame {
 
         btnCancelar.setBackground(new java.awt.Color(102, 102, 102));
         btnCancelar.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/eliminar-cancelar-icono-4935-32.png"))); // NOI18N
         btnCancelar.setText("Cancelar");
         btnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCancelar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -302,6 +305,7 @@ public class JfInterfazSalon extends javax.swing.JInternalFrame {
 
         btnSalir.setBackground(new java.awt.Color(102, 102, 102));
         btnSalir.setFont(new java.awt.Font("Bodoni MT", 1, 14)); // NOI18N
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Salir.png"))); // NOI18N
         btnSalir.setText("Salir");
         btnSalir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnSalir.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -327,7 +331,7 @@ public class JfInterfazSalon extends javax.swing.JInternalFrame {
                 .addComponent(btnCancelar)
                 .addGap(18, 18, 18)
                 .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -346,31 +350,29 @@ public class JfInterfazSalon extends javax.swing.JInternalFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -380,180 +382,222 @@ public class JfInterfazSalon extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
+    private void btnSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegistrarActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_btnSalirMouseClicked
 
-    private void btnRegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegistrarMouseClicked
+    private void btnCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelarMouseClicked
         // TODO add your handling code here:
-        String Salon=txtNumeroSalon.getText();
-        
-        
-        String boton=btnRegistrar.getText();
-        
-        if(Salon.equalsIgnoreCase("")){
-            JOptionPane.showMessageDialog(null, "Ingrese Numero de Salon");
-        }
-        else{
-            int numSalon=Integer.parseInt(Salon);
-            
-            if(boton.equalsIgnoreCase("Registrar")){
-                modelSalon.setNumeroSalon(numSalon);
-                controlSalon1.RegistrarSalon(modelSalon);
-                mostrar("");
-                inhabilitar();
+        inhabilitar();
+    }//GEN-LAST:event_btnCancelarMouseClicked
+
+    private void btnEliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarMouseClicked
+        int fila = tbSalon.getSelectedRow();
+        String idSalon = tbSalon.getValueAt(fila, 0).toString();
+
+        //        int numEli = Integer.parseInt(numEliminar);
+
+        //        JOptionPane.showMessageDialog(null, "Salón a eliminar:  " + numEliminar);
+        int confirmacion = JOptionPane.showConfirmDialog(null, "Seguro deseas eliminar salón", "Inane warning", JOptionPane.YES_NO_OPTION);
+        if (confirmacion == 0) {
+            String numEliminar = txtNumeroSalon.getText();
+            modelSalon.setNumeroSalon(numEliminar);
+
+            String salonEncontrado = "";
+
+            try {
+                // PBI1:HU01: MÉTODO  QUE CONSULTA   SI UN SALON TIENE UN HORARIO  ASIGNADO
+                salonEncontrado = controlSalon.consultarSalonTieneHorario(salon);
+                System.out.println("salonEncontrado" + salonEncontrado);
+
+            } catch (SQLException ex) {
+                Logger.getLogger(InterfazSalon.class
+                    .getName()).log(Level.SEVERE, null, ex);
             }
-            if(boton.equalsIgnoreCase("Guardar cambios")){
-                modelSalon.setNumeroSalon(salon);
-                
-                int salonEncontrado = 0;
-            
-                try {
-                    salonEncontrado = controlSalon1.consultarSalonTieneHorario(salon);
-                } catch (SQLException ex) {
-                    Logger.getLogger(JfInterfazSalon.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            
-                if (salonEncontrado == salon) {
-                    JOptionPane.showMessageDialog(rootPane, "EL SALON " + salonEncontrado + " NO SE PUEDE MODIFICAR, TIENE UN HORARIO ASIGNADO", "ERROR", JOptionPane.ERROR_MESSAGE);
-                }else {
-                controlSalon1.modificarSalon(modelSalon,salon);
-                salon=0;
-                mostrar("");
+
+            if (salonEncontrado.equalsIgnoreCase(idSalon)) {
+                JOptionPane.showMessageDialog(rootPane, "EL SALON " + numEliminar + "  NO SE PUEDE ELIMINAR, TIENE UN HORARIO ASIGNADO", "ERROR", JOptionPane.ERROR_MESSAGE);
                 inhabilitar();
-                
-            }
-        }}
+            } else {
+                //       PBI1:HU01: MÉTODO  QUE ELIMINA  UN SALÓN
+                controlSalon.eliminarSalon(modelSalon);
+                salon = "";
+                mostrarDatos();
+                inhabilitar();
 
-        
-        
-    }//GEN-LAST:event_btnRegistrarMouseClicked
-
-    private void tbSalonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbSalonMouseClicked
-        // TODO add your handling code here:
-        habilitar();
-        
-        int fila=tbSalon.rowAtPoint(evt.getPoint());
-        
-
-        txtNumeroSalon.setText(tbSalon.getValueAt(fila, 0).toString());
-        salon=Integer.parseInt(txtNumeroSalon.getText());
-//        JOptionPane.showMessageDialog(null, "Salon es: "+salon);
-        
-    }//GEN-LAST:event_tbSalonMouseClicked
+            } }
+    }//GEN-LAST:event_btnEliminarMouseClicked
 
     private void btnModificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnModificarMouseClicked
         // TODO add your handling code here:
         habilitarModificar();
     }//GEN-LAST:event_btnModificarMouseClicked
 
-    private void btnEliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarMouseClicked
+    private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         // TODO add your handling code here:
-        String numEliminar=txtNumeroSalon.getText();
-        int numEli=Integer.parseInt(numEliminar);
-        
-        JOptionPane.showMessageDialog(null, "Resultado "+numEli);
-        
-        modelSalon.setNumeroSalon(numEli);
-        
-         int salonEncontrado = 0;
-            
+    }//GEN-LAST:event_btnRegistrarActionPerformed
+
+    private void btnRegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegistrarMouseClicked
+
+        String boton = btnRegistrar.getText();
+        String salonModificar = txtNumeroSalon.getText().toUpperCase();
+
+        if (boton.equalsIgnoreCase("Registrar")) {
+            //        PBI1:HU01:03:valida campo vacío
+            if (txtNumeroSalon.getText().equals("")) {
+
+                JOptionPane.showMessageDialog(null, "Debes ingresar número  o nombre de salon");
+
+            } else {
+
+                String salonEncontrado = "";
+                //                System.out.println("salonEncontrado " + salonEncontrado);
                 try {
-                    salonEncontrado = controlSalon1.consultarSalonTieneHorario(salon);
+
+                    ////          //   PBI1:HU02:01: MÉTODO QUE  VALIDA SI EL  SALON TIENE  UN HORARIO ASIGNADO PARA NO MODIFICARLO
+                    salonEncontrado = controlSalon.consultarSalonEspecifico(salonModificar);
+                    //                     System.out.println("salonEncontrado " + salonEncontrado);
                 } catch (SQLException ex) {
-                    Logger.getLogger(JfInterfazSalon.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(InterfazSalon.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            
-                if (salonEncontrado == salon) {
-                    JOptionPane.showMessageDialog(rootPane, "EL SALON " + salonEncontrado + " NO SE PUEDE ELIMINAR, TIENE UN HORARIO ASIGNADO", "ERROR", JOptionPane.ERROR_MESSAGE);
-                }else {
-        controlSalon1.eliminarSalon(modelSalon);
-        mostrar("");
-        inhabilitar();
-        
-            } 
-        
-        
-    }//GEN-LAST:event_btnEliminarMouseClicked
 
-    private void btnSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseClicked
-        // TODO add your handling code here:
-        this.setVisible(false);
-    }//GEN-LAST:event_btnSalirMouseClicked
+                if (salonEncontrado.equalsIgnoreCase(salonModificar)) {
+                    System.out.println("salon" + salonEncontrado);
+                    JOptionPane.showMessageDialog(rootPane, "EL Salon  " + salonModificar + " ya  existe", "ERROR", JOptionPane.ERROR_MESSAGE);
+                    txtNumeroSalon.setText("");
+                    inhabilitar();
+                } else {
+                    //AGREGA A MODELO LOS   DATOS
+                    modelSalon.setNumeroSalon(salonModificar);
+                    System.out.println("salon" + salonModificar);
 
-    private void txtNumeroSalonKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumeroSalonKeyTyped
-        // TODO add your handling code here:
-        char k= evt.getKeyChar();
-        if(Character.isLetter(k)){
-            getToolkit().beep();
-            evt.consume();
-            JOptionPane.showMessageDialog(null, "No se puede ingresar Letras", "Error Datos", JOptionPane.ERROR_MESSAGE);
+                    //   PBI1:HU01:01: MÉTODO QUE REGISTRA UN SALON
+                    controlSalon.RegistrarSalon(modelSalon);
+                    //                MUESTRA DATOS EN LA TABLA
+                    mostrarDatos();
+                    //                HABILITA BOTONES
+                    inhabilitar();
+
+                }
+            }
+
         }
-    }//GEN-LAST:event_txtNumeroSalonKeyTyped
+
+        if (boton.equalsIgnoreCase("Guardar cambios")) {
+            int fila = tbSalon.getSelectedRow();
+            String idSalon = tbSalon.getValueAt(fila, 0).toString();
+            String salonExiste = tbSalon.getValueAt(fila, 1).toString();
+            //   PBI1:HU02:03: MÉTODO QUE REGISTRA UN SALON VALIDA CAMPO VACÍO
+            if (txtNumeroSalon.getText().equals("")) {
+
+                JOptionPane.showMessageDialog(null, "Debes ingresar número  o nombre de salon");
+            } else {
+
+                String salonEncontrado = "";
+                //                System.out.println("salonEncontrado " + salonEncontrado);
+                try {
+
+                    ////          //   PBI1:HU02:01: MÉTODO QUE  VALIDA SI EL  SALON TIENE  UN HORARIO ASIGNADO PARA NO MODIFICARLO
+                    salonEncontrado = controlSalon.consultarSalonTieneHorario(salon);
+                    //                     System.out.println("salonEncontrado " + salonEncontrado);
+                } catch (SQLException ex) {
+                    Logger.getLogger(InterfazSalon.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+                if (salonEncontrado.equalsIgnoreCase(idSalon)) {
+                    //                    System.out.println("salon" + salonEncontrado);
+                    JOptionPane.showMessageDialog(rootPane, "EL Salon " + salonExiste + " NO SE PUEDE MODIFICAR, TIENE UN HORARIO ASIGNADO", "ERROR", JOptionPane.ERROR_MESSAGE);
+                    txtNumeroSalon.setText("");
+                    inhabilitar();
+                } else {
+                    //          ASIGNA LOS  DATOS AL MODELO
+                    modelSalon.setNumeroSalon(salonModificar);
+                    //                    System.out.println("salon1" + salon1);
+                    //                     System.out.println("idSalon" + idSalon);
+
+                    try {
+                        //           MÉTODO QUE MODIFICA EL  GRUPO
+                        controlSalon.modificarSalon(idSalon, txtNumeroSalon.getText());
+                        inhabilitar();
+                    } catch (SQLException ex) {
+                        Logger.getLogger(InterfazSalon.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (ClassNotFoundException ex) {
+                        Logger.getLogger(InterfazSalon.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+
+                    //                    MUESTRA  LOS DATOS  EN LA TABLA
+                    mostrarDatos();
+                    //                    HABILITA LOS BOTONES
+
+                }
+            }
+        }
+    }//GEN-LAST:event_btnRegistrarMouseClicked
 
     private void btnBuscarSalonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBuscarSalonMouseClicked
-        // TODO add your handling code here:
-        String sal;
-        String nomma;
-        String sma;
-        String canth;
-        String mensaj[]=null;
-        String seleccionHoras="";
+
+        String seleccionHoras = "";
         try {
-            // TODO add your handling code here:
-            String buscar=txtBuscarSalon.getText();
-            if(buscar.equalsIgnoreCase("")){
-                JOptionPane.showMessageDialog(null,"Campo vacio ingrese numero de Grupo a Buscar","Inane warning",JOptionPane.WARNING_MESSAGE);
-                
-            }else{
-                mostrar(buscar);
-                String mensaje="";
-            
-                mensaje = controlSalon1.consultarSalonEspecifico(buscar);
-                if(mensaje.equalsIgnoreCase("")){
-                    JOptionPane.showMessageDialog(null,"El grupo no se encuentra registrado","Inane warning",JOptionPane.WARNING_MESSAGE);
+
+            String buscar = txtBuscarSalon.getText();
+            //            Valida campo vacío
+            if (buscar.equalsIgnoreCase("")) {
+                JOptionPane.showMessageDialog(null, "Campo vacío,ingresar número  o nombre de salon");
+
+            } else {
+
+                mostrarDatos();
+                String mensaje = "";
+                //    PBI1:HU01:04: MÉTODO   QUE HACE UNA CONSULTAR ESPECÍFICA
+                mensaje = controlSalon.consultarSalonEspecifico(buscar);
+                if (mensaje.equalsIgnoreCase("")) {
+                    JOptionPane.showMessageDialog(null, "El grupo no se encuentra registrado");
                     txtBuscarSalon.setText("");
-                mostrar("");
-                }else{
+                    mostrarDatos();
+                } else {
                     habilitar();
                     txtNumeroSalon.setText(mensaje);
                     txtBuscarSalon.setText("");
-                    
+
                 }
-                
-                
+
             }
-            
-            
-                
-                
-            } catch (SQLException ex) {
-                Logger.getLogger(JfInterfazMateria.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        
+
+        } catch (SQLException ex) {
+//            Logger.getLogger(InterfazMateria.class
+//                .getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnBuscarSalonMouseClicked
+
+    private void tbSalonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbSalonMouseClicked
+
+        habilitar();
+
+        int fila = tbSalon.rowAtPoint(evt.getPoint());
+
+        txtNumeroSalon.setText(tbSalon.getValueAt(fila, 1).toString());
+    }//GEN-LAST:event_tbSalonMouseClicked
 
     private void txtBuscarSalonKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarSalonKeyTyped
         // TODO add your handling code here:
-        char k= evt.getKeyChar();
-        if(Character.isLetter(k)){
-            getToolkit().beep();
-            evt.consume();
-            JOptionPane.showMessageDialog(null, "No se puede ingresar Letras", "Error Datos", JOptionPane.WARNING_MESSAGE);
-        }
-        else{
-            String buscar1=txtBuscarSalon.getText();
-        
-            mostrar(buscar1);
-            
-        }
-        
+        //        char k= evt.getKeyChar();
+        //        if(Character.isLetter(k)){
+            //            getToolkit().beep();
+            //            evt.consume();
+            //            JOptionPane.showMessageDialog(null, "No se puede ingresar Letras", "Error Datos", JOptionPane.WARNING_MESSAGE);
+            //        }
+        //        else{
+            String buscar1 = txtBuscarSalon.getText();
+
+            mostrarDatos();
+            //
+            //        }
     }//GEN-LAST:event_txtBuscarSalonKeyTyped
 
-    private void btnCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelarMouseClicked
-        // TODO add your handling code here:
-        inhabilitar();
-    }//GEN-LAST:event_btnCancelarMouseClicked
+    private void txtNumeroSalonKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumeroSalonKeyTyped
+
+    }//GEN-LAST:event_txtNumeroSalonKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

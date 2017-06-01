@@ -11,20 +11,20 @@ package Modelo;
  */
 public class EntidadSalon {
     
-    public int NumeroSalon;
+    public String NumeroSalon;
 
     public EntidadSalon() {
     }
 
-    public EntidadSalon(int NumeroSalon) {
+    public EntidadSalon(String NumeroSalon) {
         this.NumeroSalon = NumeroSalon;
     }
 
-    public int getNumeroSalon() {
+    public String getNumeroSalon() {
         return NumeroSalon;
     }
 
-    public void setNumeroSalon(int NumeroSalon) {
+    public void setNumeroSalon(String NumeroSalon) {
         this.NumeroSalon = NumeroSalon;
     }
  
